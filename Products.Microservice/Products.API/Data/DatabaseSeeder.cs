@@ -24,7 +24,6 @@ namespace Products.API.Data
         {
             try
             {
-                // Verifica se já existem produtos
                 if (await _context.Products.AnyAsync())
                 {
                     _logger.LogInformation("ℹ️ Banco de dados já contém produtos. Seed ignorado.");
@@ -40,8 +39,6 @@ namespace Products.API.Data
             catch (Exception ex)
             {
                 _logger.LogError(ex, "❌ Erro ao executar seed de dados");
-                // Não lança exceção aqui, apenas loga o erro
-                // O seed é opcional, não deve impedir a API de iniciar
             }
         }
 

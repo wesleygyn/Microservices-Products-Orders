@@ -11,9 +11,6 @@ namespace Products.API.Extensions
 {
     public static class DatabaseExtensions
     {
-        /// <summary>
-        /// Aplica migrations automáticas no banco de dados
-        /// </summary>
         public static IApplicationBuilder ApplyMigrations(this IApplicationBuilder app)
         {
             using var scope = app.ApplicationServices.CreateScope();
@@ -42,15 +39,12 @@ namespace Products.API.Extensions
             catch (Exception ex)
             {
                 logger.LogError(ex, "❌ Erro ao aplicar migrations");
-                throw; // Re-throw para impedir a inicialização da API se houver erro crítico
+                throw;
             }
 
             return app;
         }
 
-        /// <summary>
-        /// Insere dados iniciais no banco (seed)
-        /// </summary>
         public static IApplicationBuilder SeedDatabase(this IApplicationBuilder app)
         {
             using var scope = app.ApplicationServices.CreateScope();

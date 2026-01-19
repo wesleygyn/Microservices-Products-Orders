@@ -328,4 +328,51 @@ public class ProductServiceTests
         _repositoryMock.Verify(r => r.GetByIdAsync(4), Times.Once);
         _repositoryMock.Verify(r => r.UpdateAsync(It.IsAny<Product>()), Times.Once);
     }
+
+    [Fact]
+    public async Task GetActiveProductsAsync_ReturnsOnlyActiveProducts()
+    {
+        var products = new List<Product>
+    {
+        new() { Id = 1, Active = true, Name = "A", Price = 1, Category = CategoryEnum.SANDWICH },
+        new() { Id = 2, Active = false, Name = "B", Price = 2, Category = CategoryEnum.DRINK },
+        new() { Id = 3, Active = true, Name = "C", Price = 3, Category = CategoryEnum.SIDE }
+    };
+
+        _repositoryMock.Setup(r => r.GetActiveProductsAsync())
+            .ReturnsAsync(products.Where(p => p.Active));
+
+        var result = (await _service.GetActiveProductsAsync()).ToList();
+
+        result.Should().HaveCount(2);
+        result.Should().OnlyContain(p => p.Active);
+
+        _repositoryMock.Verify(r => r.GetActiveProductsAsync(), Times.Once);
+    }
+
+    [Fact]
+    public async Task GetByCategoryAsync_WhenNoProducts_ReturnsEmptyList()
+    {
+        _repositoryMock.Setup(r => r.GetByCategoryAsync(CategoryEnum.DRINK))
+            .ReturnsAsync(new List<Product>());
+
+        var result = await _service.GetByCategoryAsync(CategoryEnum.DRINK);
+
+        result.Should().NotBeNull();
+        result.Should().BeEmpty();
+
+        _repositoryMock.Verify(r => r.GetByCategoryAsync(CategoryEnum.DRINK), Times.Once);
+    }
+
+    [Fact]
+    public async Task GetAllAsync_WhenNoProducts_ReturnsEmptyList()
+    {
+        _repositoryMock.Setup(r => r.GetAllAsync())
+            .ReturnsAsync(new List<Product>());
+
+        var result = await _service.GetAllAsync();
+
+        result.Should().NotBeNull();
+        result.Should().BeEmpty();
+    }
 }
