@@ -52,14 +52,12 @@ jobs:
           SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
           SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
         run: |
-          # Print do token para depuração (cuidado com exposição!)
-          Write-Host "SONAR_TOKEN: $env:SONAR_TOKEN"
-      
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin `
-            /k:"$env:SONAR_PROJECT_KEY" `
-            /o:"$env:SONAR_ORGANIZATION" `
-            /d:sonar.token="$env:SONAR_TOKEN" `
-            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          /k:"$env:SONAR_PROJECT_KEY" `
+          /o:"$env:SONAR_ORGANIZATION" `
+          /d:sonar.token="$env:SONAR_TOKEN" `
+          /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" `
+          /d:sonar.coverage.exclusions="**/Program.cs,**/*Extensions*.cs"
       
           dotnet build
       
@@ -67,8 +65,9 @@ jobs:
             --no-build `
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
-            /p:CoverletOutput=./TestResults/coverage/
+            /p:CoverletOutput=./coverage.opencover.xml
       
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end `
             /d:sonar.token="$env:SONAR_TOKEN"
+
 
