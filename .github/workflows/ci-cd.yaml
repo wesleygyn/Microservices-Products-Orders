@@ -1,4 +1,4 @@
-name: SonarQube
+name: SonarQube Analysis # Nome mais descritivo para o workflow
 on:
   push:
     branches:
@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    name: Build and analyze
-    runs-on: windows-latest
+    name: Build, Test and Analyze # Nome mais descritivo para o job
+    runs-on: windows-latest # Mantendo o runner Windows como você configurou
 
     steps:
       - name: Set up JDK 17
@@ -21,53 +21,46 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Desabilitar shallow clones é recomendado para SonarQube
 
-      - name: Cache Sonar packages
-        uses: actions/cache@v4
+      # Removendo o cache do SonarScanner. O `dotnet tool install --global` é rápido o suficiente
+      # e evita problemas com versões cacheadas ou caminhos.
+
+      - name: Install .NET SDK # Adicionando a instalação do SDK .NET explicitamente
+        uses: actions/setup-dotnet@v4
         with:
-          path: ~\sonar\cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+          dotnet-version: '8.0.x' # Garanta que esta versão corresponda ao seu projeto
 
-      - name: Cache Sonar scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v4
-        with:
-          path: ${{ runner.temp }}\scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarScanner for .NET
+        run: dotnet tool install --global dotnet-sonarscanner --version 5.14.0 # Ou a versão estável mais recente
 
-      - name: Install SonarScanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        shell: powershell
-        run: |
-          New-Item -Path "${{ runner.temp }}\scanner" -ItemType Directory -Force
-          dotnet tool update dotnet-sonarscanner --tool-path "${{ runner.temp }}\scanner"
-
-      - name: Build, Test and Analyze
+      - name: Build, Test and Analyze with SonarQube
         shell: powershell
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
-          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
+          SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} # Assumindo que este também é um secret
+          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}   # Assumindo que este também é um secret
         run: |
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin `
+          # Inicia a análise do SonarScanner
+          dotnet sonarscanner begin `
           /k:"$env:SONAR_PROJECT_KEY" `
           /o:"$env:SONAR_ORGANIZATION" `
           /d:sonar.token="$env:SONAR_TOKEN" `
+          /d:sonar.host.url="https://sonarcloud.io" ` # <--- ADICIONE ESTA LINHA CRÍTICA
           /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" `
           /d:sonar.coverage.exclusions="**/Program.cs,**/*Extensions*.cs,**/Migrations/**"
-      
-          dotnet build
-      
+
+          # Constrói o projeto
+          dotnet build --no-incremental
+
+          # Executa os testes e coleta a cobertura
           dotnet test `
             --no-build `
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
-            /p:CoverletOutput=./coverage.opencover.xml
-      
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner end `
+            /p:CoverletOutput=./coverage.opencover.xml `
+            --results-directory TestResults/ # Boa prática para organizar os resultados dos testes
+
+          # Finaliza a análise do SonarScanner
+          dotnet sonarscanner end `
             /d:sonar.token="$env:SONAR_TOKEN"
-
-
