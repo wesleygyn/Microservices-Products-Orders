@@ -5,7 +5,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-4EA94B?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.13-FF6600?logo=rabbitmq&logoColor=white)](https://www.rabbitmq.com/)
-[![Tests](https://img.shields.io/badge/Tests-84.5%25%20Coverage-success)](https://xunit.net/) <!-- Atualizado para 84.5% de cobertura -->
+[![Tests](https://img.shields.io/badge/Tests-84.5%25%20Coverage-success)](https://xunit.net/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 <!-- COLOQUE AQUI O BADGE DE CI/CD DO GITHUB ACTIONS -->
@@ -78,7 +78,7 @@ A Lanchonete FIAP, em sua expansão, enfrentava desafios no controle de pedidos 
 
 | Métrica | Valor | Status |
 |---------|-------|--------|
-| **Cobertura de Testes** | **84.5%+** | ✅ Meta Alcançada | <!-- Atualizado para 84.5% -->
+| **Cobertura de Testes** | **84.5%+** | ✅ Meta Alcançada |
 | **Testes Unitários** | **~XXX** | ✅ Abrangente |
 | **Linhas Cobertas** | **XXX/YYY** | ✅ Meta Alcançada |
 | **CI/CD** | Automatizado | ✅ GitHub Actions |
@@ -111,9 +111,43 @@ O projeto segue os princípios de **Clean Architecture** e **Microsserviços**, 
 
 ### Diagramas Arquiteturais
 
-<!-- Esta seção é para incluir seus diagramas. Se você tiver links para imagens ou arquivos .drawio, pode colocá-los aqui. -->
-<!-- Exemplo: ![Diagrama C4 Contexto](link-para-sua-imagem-diagrama-c4-contexto.png) -->
-<!-- Exemplo: [Diagrama C4 Containers (Draw.io)](link-para-seu-arquivo-drawio) -->
+Aqui estão os diagramas arquiteturais do projeto, com suas respectivas imagens e links para os arquivos editáveis no Draw.io:
+
+#### 1. Event Storming Lanchonete FIAP
+![Event Storming Lanchonete FIAP](docs/diagrams/01-event-storming-lanchonete-fiap.png)
+[Download .drawio](docs/diagrams/01-event-storming-lanchonete-fiap.drawio)
+
+#### 2. C4 Nível 1: Contexto
+![C4 Nível 1: Contexto](docs/diagrams/02-c4-nivel1-contexto.png)
+[Download .drawio](docs/diagrams/02-c4-nivel1-contexto.drawio)
+
+#### 3. C4 Nível 2: Containers
+![C4 Nível 2: Containers](docs/diagrams/03-c4-nivel2-containers.png)
+[Download .drawio](docs/diagrams/03-c4-nivel2-containers.drawio)
+
+#### 4. C4 Nível 3: Componentes API Order
+![C4 Nível 3: Componentes API Order](docs/diagrams/04-c4-nivel3-componentes-api-order.png)
+[Download .drawio](docs/diagrams/04-c4-nivel3-componentes-api-order.drawio)
+
+#### 5. C4 Nível 3: Componentes API Products
+![C4 Nível 3: Componentes API Products](docs/diagrams/05-c4-nivel3-componentes-api-products.png)
+[Download .drawio](docs/diagrams/05-c4-nivel3-componentes-api-products.drawio)
+
+#### 6. C4 Nível 3: Componentes API Customer
+![C4 Nível 3: Componentes API Customer](docs/diagrams/06-c4-nivel3-componentes-api-customer.png)
+[Download .drawio](docs/diagrams/06-c4-nivel3-componentes-api-customer.drawio)
+
+#### 7. C4 Nível 3: Componentes API Payment
+![C4 Nível 3: Componentes API Payment](docs/diagrams/07-c4-nivel3-componentes-api-payment.png)
+[Download .drawio](docs/diagrams/07-c4-nivel3-componentes-api-payment.drawio)
+
+#### 8. Diagrama de Deployment
+![Diagrama de Deployment](docs/diagrams/08-deployment-diagram.png)
+[Download .drawio](docs/diagrams/08-deployment-diagram.drawio)
+
+#### 9. Diagrama de Sequência Completo
+![Diagrama de Sequência Completo](docs/diagrams/09-sequence-diagram-complete.png)
+[Download .drawio](docs/diagrams/09-sequence-diagram-complete.drawio)
 
 ---
 
@@ -323,6 +357,25 @@ Cada microsserviço possui seu próprio projeto de testes:
 ## 📁 Estrutura do Projeto
 
 <!-- Adicione aqui uma descrição da estrutura de pastas do seu projeto, ou um diagrama de pastas se tiver. -->
+<!-- Exemplo: -->
+<!-- ```
+.
+├── .github/
+├── docs/
+│   ├── diagrams/
+│   │   ├── 01-event-storming-lanchonete-fiap.drawio
+│   │   └── ... (outros diagramas)
+│   ├── APRESENTACAO.md
+│   └── ... (outros documentos)
+├── src/
+│   ├── Customer.Microservice/
+│   ├── Orders.Microservice/
+│   ├── Payment.Microservice/
+│   └── Products.Microservice/
+├── docker-compose.yml
+├── README.md
+└── ...
+``` -->
 
 ---
 
@@ -365,9 +418,8 @@ Cada microsserviço possui seu próprio projeto de testes:
 ## 📝 Decisões Arquiteturais (ADRs)
 
 <!-- Adicione aqui links ou descrições das suas Architectural Decision Records (ADRs). -->
-<!-- Exemplo: -->
-<!-- - [ADR-001: Escolha do Banco de Dados para Produtos](docs/adr/adr-001-database-choice.md) -->
-<!-- - [ADR-002: Estratégia de Comunicação entre Microsserviços](docs/adr/adr-002-microservice-communication.md) -->
+<!-- Se você tiver arquivos ADRs específicos, pode listá-los aqui. -->
+- [Documento de Arquitetura Geral](docs/architecture-document.md)
 
 ---
 
@@ -404,7 +456,7 @@ docker-compose up --build -d
 docker-compose ps
 
 # Ver logs
-docker-compose logs -f
+docker-compose ps
 
 # Parar tudo
 docker-compose down
@@ -587,6 +639,13 @@ Para reportar bugs ou sugerir melhorias:
 
 ## 📚 Documentação Adicional
 
+Aqui você encontra links para a documentação mais detalhada do projeto:
+
+- [Apresentação do Projeto](docs/APRESENTACAO.md)
+- [Documento de Arquitetura](docs/architecture-document.md)
+- [Diagramas C4 Detalhados](docs/diagramas-c4.md)
+- [Event Storming Completo](docs/event-storming.md)
+- [Manual de Uso Completo](docs/MANUAL-USO-COMPLETO.md)
 - [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - [Microservices Patterns](https://microservices.io/patterns/index.html)
 - [ASP.NET Core Documentation](https://docs.microsoft.com/aspnet/core)
@@ -604,7 +663,7 @@ Para reportar bugs ou sugerir melhorias:
 ## 🏆 Destaques do Projeto
 
 ### ✅ Qualidade de Código
-- **84.5%+** de cobertura de testes (meta: 80%+) <!-- Atualizado para 84.5% -->
+- **84.5%+** de cobertura de testes (meta: 80%+)
 - CI/CD totalmente automatizado
 - Code quality badges funcionando (se configurados)
 
@@ -644,7 +703,7 @@ Para reportar bugs ou sugerir melhorias:
 
 > **"Nosso projeto não é apenas código funcional, mas um exemplo completo de arquitetura de software de excelência para a Lanchonete FIAP:**
 >
-> - ✅ **84.5%+ de cobertura** de testes <!-- Atualizado para 84.5% -->
+> - ✅ **84.5%+ de cobertura** de testes
 > - ✅ **Event Storming profissional** com bounded contexts claros
 > - ✅ **C4 Model em 3 níveis** (padrão da indústria)
 > - ✅ **Clean Architecture** com SOLID aplicado
@@ -670,7 +729,6 @@ Para reportar bugs ou sugerir melhorias:
 8.  **Testar fluxo completo** → Montar pedido no Totem → Pagar via QR Code → Acompanhar status → Retirar pedido
 9.  **Mostrar observabilidade** → Logs em tempo real no Seq, RabbitMQ Management
 
----
 
 <div align="center">
 
