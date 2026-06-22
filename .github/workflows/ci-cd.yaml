@@ -1,4 +1,4 @@
-name: SonarQube Analysis # Nome mais descritivo para o workflow
+name: CI/CD Pipeline # Nome mais descritivo para o workflow
 on:
   push:
     branches:
@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    name: Build, Test and Analyze # Nome mais descritivo para o job
-    runs-on: windows-latest # Mantendo o runner Windows como você configurou
+    name: Build, Test and Analyze
+    runs-on: windows-latest
 
     steps:
       - name: Set up JDK 17
@@ -21,40 +21,85 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Desabilitar shallow clones é recomendado para SonarQube
+          fetch-depth: 0
 
-      # Removendo o cache do SonarScanner. O `dotnet tool install --global` é rápido o suficiente
-      # e evita problemas com versões cacheadas ou caminhos.
-
-      - name: Install .NET SDK # Adicionando a instalação do SDK .NET explicitamente
+      - name: Install .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x' # Garanta que esta versão corresponda ao seu projeto (ex: 6.0.x, 7.0.x, 8.0.x)
+          dotnet-version: '8.0.x'
 
       - name: Install SonarScanner for .NET
-        run: dotnet tool install --global dotnet-sonarscanner --version 5.14.0 # Ou a versão estável mais recente
+        run: dotnet tool install --global dotnet-sonarscanner --version 5.14.0
 
       - name: Build, Test and Analyze with SonarQube
         shell: powershell
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} # Assumindo que este também é um secret
-          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}   # Assumindo que este também é um secret
+          SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
+          SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
         run: |
-          # Inicia a análise do SonarScanner - Tudo em uma única linha lógica para evitar erros de parsing do PowerShell
           dotnet sonarscanner begin /k:"$env:SONAR_PROJECT_KEY" /o:"$env:SONAR_ORGANIZATION" /d:sonar.token="$env:SONAR_TOKEN" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**/Program.cs,**/*Extensions*.cs,**/Migrations/**"
 
-          # Constrói o projeto
           dotnet build --no-incremental
 
-          # Executa os testes e coleta a cobertura
           dotnet test `
             --no-build `
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput=./coverage.opencover.xml `
-            --results-directory TestResults/ # Boa prática para organizar os resultados dos testes
+            --results-directory TestResults/
 
-          # Finaliza a análise do SonarScanner
           dotnet sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
-          
+
+  deploy: # Novo job para o deploy
+    name: Deploy Application
+    runs-on: ubuntu-latest # Usar Linux é mais comum e eficiente para Docker
+    needs: build # Este job só rodará se o job 'build' for bem-sucedido
+    if: github.ref == 'refs/heads/main' # Este job só rodará em pushes para a branch 'main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3 # Ferramenta para construir imagens Docker de forma eficiente
+
+      # Não incluímos o Login no Docker Hub para focar no deploy simulado e evitar atrasos.
+      # Se precisar publicar imagens no futuro, pode adicionar este passo.
+
+      - name: Build Docker Images for Microservices # Constrói as imagens Docker
+        run: |
+          # products_api
+          docker build -t products-api:latest -f Products.Microservice/Products.API/Dockerfile Products.Microservice
+          # orders_api
+          docker build -t orders-api:latest -f Orders.Microservice/Orders.API/Dockerfile Orders.Microservice
+          # customers_api
+          docker build -t customers-api:latest -f Customer.Microservice/Customer.API/Dockerfile Customer.Microservice
+          # payment_api
+          docker build -t payment-api:latest -f Payment.Microservice/Payment.API/Dockerfile Payment.Microservice
+        # O contexto de build (último argumento do docker build) é a pasta raiz do microsserviço,
+        # pois os Dockerfiles usam caminhos relativos a essa pasta (ex: COPY ["Customer.API/...", "Customer.API/"]).
+        # O -f especifica o caminho completo do Dockerfile dentro desse contexto.
+
+      - name: Simulate Docker Compose Up # Simula o deploy localmente
+        run: |
+          # Inicia os serviços definidos no seu docker-compose.yml em background
+          docker compose up -d
+
+          # Aguarda um tempo para os serviços subirem e ficarem saudáveis
+          echo "Aguardando 60 segundos para os serviços subirem e healthchecks passarem..."
+          sleep 60s
+
+          # Opcional: Adicione verificações de saúde mais robustas aqui se necessário.
+          # Por exemplo, um curl para um endpoint de health check de um dos microsserviços.
+          # Exemplo: curl -f http://localhost:5001/health || exit 1
+
+          echo "Deploy simulado concluído com sucesso!"
+        # A propriedade 'if: always()' garante que o cleanup seja executado
+        # independentemente do sucesso ou falha dos passos anteriores no mesmo job.
+        if: always()
+
+      - name: Docker Compose Down (Cleanup) # Derruba os serviços após a simulação
+        run: |
+          docker compose down
+        if: always() # Garante que o cleanup sempre ocorra
