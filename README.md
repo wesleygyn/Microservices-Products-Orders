@@ -8,11 +8,9 @@
 [![Tests](https://img.shields.io/badge/Tests-84.5%25%20Coverage-success)](https://xunit.net/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-<!-- COLOQUE AQUI O BADGE DE CI/CD DO GITHUB ACTIONS -->
-<!-- Exemplo: [![CI/CD Status](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml) -->
-
-<!-- COLOQUE AQUI O BADGE DE COBERTURA DO SONARCLOUD -->
-<!-- Exemplo: [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY&metric=coverage)](https://sonarcloud.io/dashboard?id=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY) -->
+[![CI/CD Pipeline](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yaml/badge.svg)](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yaml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wesleygyn_Microservices-Products-Orders&metric=alert_status)](https://sonarcloud.io/project/overview?id=wesleygyn_Microservices-Products-Orders)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=wesleygyn_Microservices-Products-Orders&metric=coverage)](https://sonarcloud.io/project/overview?id=wesleygyn_Microservices-Products-Orders)
 
 > **TechChallenge - Fase 4 - Pós-Graduação Arquitetura de Software - FIAP**
 
@@ -269,7 +267,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/Microservices-Products-Orders.git # ATUALIZAR LINK
+    git clone https://github.com/wesleygyn/Microservices-Products-Orders.git # ATUALIZE ESTE LINK COM O SEU REPOSITÓRIO REAL
     cd Microservices-Products-Orders
     ```
 
@@ -356,70 +354,61 @@ Cada microsserviço possui seu próprio projeto de testes:
 
 ## 📁 Estrutura do Projeto
 
-<!-- Adicione aqui uma descrição da estrutura de pastas do seu projeto, ou um diagrama de pastas se tiver. -->
-<!-- Exemplo: -->
-<!-- ```
-.
-├── .github/
-├── docs/
-│   ├── diagrams/
-│   │   ├── 01-event-storming-lanchonete-fiap.drawio
-│   │   └── ... (outros diagramas)
-│   ├── APRESENTACAO.md
-│   └── ... (outros documentos)
-├── src/
-│   ├── Customer.Microservice/
-│   ├── Orders.Microservice/
-│   ├── Payment.Microservice/
-│   └── Products.Microservice/
-├── docker-compose.yml
-├── README.md
-└── ...
-``` -->
+O projeto segue uma estrutura modular, organizada por microsserviços e camadas de Clean Architecture.
+A raiz do repositório contém as pastas de cada microsserviço (`Customer.Microservice`, `Orders.Microservice`, etc.), a pasta `docs` para documentação e diagramas, e arquivos de configuração como `docker-compose.yml` e `README.md`.
 
 ---
 
 ## 🔗 API Endpoints
 
-<!-- Liste aqui os principais endpoints de cada microsserviço, com exemplos de requisição/resposta se possível. -->
-<!-- Exemplo: -->
-<!-- ### Customer Service -->
-<!-- - `GET /api/customers/{cpf}`: Busca cliente por CPF -->
-<!-- - `POST /api/customers`: Cadastra novo cliente -->
+Cada microsserviço expõe uma API RESTful. Você pode explorar os endpoints de cada serviço através do Swagger UI, conforme os links na seção [Instalação e Execução](#instalação-e-execução).
+
+**Exemplo de Endpoints:**
+*   **Products API:** `/api/products` (GET, POST), `/api/products/{id}` (GET, PUT, DELETE)
+*   **Orders API:** `/api/orders` (GET, POST), `/api/orders/{id}` (GET, PUT)
+*   **Customers API:** `/api/customers` (GET, POST), `/api/customers/{cpf}` (GET)
+*   **Payment API:** `/api/payments` (POST), `/api/payments/webhook` (POST)
 
 ---
 
 ## 🔄 Migrations
 
-<!-- Descreva aqui como as migrations do Entity Framework Core são aplicadas para o MySQL. -->
-<!-- Exemplo: -->
-<!-- Para aplicar as migrations, execute o seguinte comando na pasta do projeto de infraestrutura do microsserviço: -->
-<!-- `dotnet ef database update` -->
+O microsserviço que utiliza MySQL (ex: Customer Service) gerencia seu esquema de banco de dados através de Migrations do Entity Framework Core.
+
+**Para aplicar as migrations:**
+1.  Navegue até a pasta do projeto de infraestrutura do microsserviço (ex: `src/Customer.Microservice/Customer.Infrastructure`).
+2.  Execute o comando: `dotnet ef database update`
 
 ---
 
 ## 🐳 Docker
 
-<!-- Adicione aqui informações adicionais sobre a configuração Docker, se houver. -->
-<!-- Exemplo: -->
-<!-- Os Dockerfiles para cada microsserviço estão localizados em suas respectivas pastas. -->
+Todos os microsserviços são containerizados usando Docker, e a orquestração é feita com Docker Compose. Isso garante um ambiente de desenvolvimento e execução consistente e isolado.
+
+*   **Dockerfiles:** Cada microsserviço possui seu próprio `Dockerfile` na pasta `[NomeDoMicrosservico].API/`.
+*   **Docker Compose:** O arquivo `docker-compose.yml` na raiz do projeto define e interliga todos os serviços (microsserviços, bancos de dados, RabbitMQ, Seq).
 
 ---
 
 ## ⚙️ Variáveis de Ambiente
 
-<!-- Detalhe aqui as variáveis de ambiente necessárias para cada microsserviço e sua finalidade. -->
-<!-- Exemplo: -->
-<!-- - `ConnectionStrings__DefaultConnection`: String de conexão com o MySQL. -->
-<!-- - `MongoDbSettings__ConnectionString`: String de conexão com o MongoDB. -->
+As configurações sensíveis e específicas do ambiente são gerenciadas através de variáveis de ambiente, conforme detalhado no arquivo `.env` na raiz do projeto.
+
+**Exemplos de variáveis importantes:**
+*   `MYSQL_ROOT_PASSWORD`, `MYSQL_DATABASE`: Credenciais e nome do banco de dados MySQL.
+*   `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, `MONGO_INITDB_DATABASE`: Credenciais e nome do banco de dados MongoDB.
+*   `MERCADOPAGO_ACCESS_TOKEN`, `MERCADOPAGO_CLIENT_ID`, `MERCADOPAGO_CLIENT_SECRET`: Credenciais para integração com o Mercado Pago.
+*   `ConnectionStrings__DefaultConnection`: String de conexão para bancos de dados SQL.
+*   `MongoDbSettings__ConnectionString`: String de conexão para o MongoDB.
 
 ---
 
 ## 📝 Decisões Arquiteturais (ADRs)
 
-<!-- Adicione aqui links ou descrições das suas Architectural Decision Records (ADRs). -->
-<!-- Se você tiver arquivos ADRs específicos, pode listá-los aqui. -->
-- [Documento de Arquitetura Geral](docs/architecture-document.md)
+As Architectural Decision Records (ADRs) documentam as decisões significativas tomadas durante o desenvolvimento do projeto, suas justificativas e as alternativas consideradas.
+
+*   [Documento de Arquitetura Geral](docs/architecture-document.md)
+*   <!-- Adicione aqui links para ADRs específicos, se você os tiver em arquivos separados (ex: docs/adr/adr-001-escolha-db.md) -->
 
 ---
 
@@ -456,7 +445,7 @@ docker-compose up --build -d
 docker-compose ps
 
 # Ver logs
-docker-compose ps
+docker-compose logs -f
 
 # Parar tudo
 docker-compose down
@@ -498,16 +487,10 @@ Arquivo: `.github/workflows/ci-cd.yml`
 
 **Badges:**
 
-```markdown
-# ATUALIZAR OS LINKS ABAIXO PARA O SEU REPOSITÓRIO DA FASE 4
-<!-- COLOQUE AQUI O BADGE DE CI/CD DO GITHUB ACTIONS -->
-<!-- Exemplo: ![CI/CD Status](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml/badge.svg) -->
+[![CI/CD Pipeline](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yaml/badge.svg)](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yaml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wesleygyn_Microservices-Products-Orders&metric=alert_status)](https://sonarcloud.io/project/overview?id=wesleygyn_Microservices-Products-Orders)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=wesleygyn_Microservices-Products-Orders&metric=coverage)](https://sonarcloud.io/project/overview?id=wesleygyn_Microservices-Products-Orders)
 
-<!-- COLOQUE AQUI O BADGE DE COBERTURA DO SONARCLOUD -->
-<!-- Exemplo: [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY&metric=coverage)](https://sonarcloud.io/dashboard?id=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY) -->
-```
-
----
 
 ## 🛡️ Resiliência
 
@@ -632,8 +615,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📞 Suporte
 
 Para reportar bugs ou sugerir melhorias:
-- Abra uma [Issue](https://github.com/seu-usuario/Microservices-Products-Orders/issues) <!-- ATUALIZAR LINK -->
-- Entre em contato via [Discussions](https://github.com/seu-usuario/Microservices-Products-Orders/discussions) <!-- ATUALIZAR LINK -->
+- Abra uma [Issue](https://github.com/wesleygyn/Microservices-Products-Orders/issues) <!-- ATUALIZE ESTE LINK -->
+- Entre em contato via [Discussions](https://github.com/wesleygyn/Microservices-Products-Orders/discussions) <!-- ATUALIZE ESTE LINK -->
 
 ---
 
@@ -729,6 +712,7 @@ Aqui você encontra links para a documentação mais detalhada do projeto:
 8.  **Testar fluxo completo** → Montar pedido no Totem → Pagar via QR Code → Acompanhar status → Retirar pedido
 9.  **Mostrar observabilidade** → Logs em tempo real no Seq, RabbitMQ Management
 
+---
 
 <div align="center">
 
