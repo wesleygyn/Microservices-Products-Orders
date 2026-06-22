@@ -4,6 +4,7 @@ using Orders.Domain.Entities;
 using Orders.Domain.Enums;
 using Orders.Infrastructure.Data;
 using Orders.Infrastructure.Repositories;
+using Microsoft.Data.Sqlite;
 
 namespace Orders.Tests.Infrastructure.Repositories
 {
@@ -11,21 +12,27 @@ namespace Orders.Tests.Infrastructure.Repositories
     {
         private readonly OrdersDbContext _context;
         private readonly OrderRepository _repository;
+        private readonly SqliteConnection _connection;
 
         public OrderRepositoryTests()
         {
+            _connection = new SqliteConnection("DataSource=:memory:");
+            _connection.Open();
+
             var options = new DbContextOptionsBuilder<OrdersDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .UseSqlite(_connection)
                 .Options;
 
             _context = new OrdersDbContext(options);
+            _context.Database.EnsureCreated();
             _repository = new OrderRepository(_context);
         }
 
         public void Dispose()
         {
-            _context.Database.EnsureDeleted();
             _context.Dispose();
+            _connection.Close();
+            _connection.Dispose();
         }
 
         #region GetByIdAsync Tests
