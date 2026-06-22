@@ -11,8 +11,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p123456"]
       interval: 10s
@@ -31,8 +30,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     healthcheck:
       test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
       interval: 10s
@@ -55,8 +53,7 @@ services:
       mysql:
         condition: service_healthy
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     restart: on-failure
 
   # API de Pedidos
@@ -79,8 +76,7 @@ services:
       products_api:
         condition: service_started
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     restart: on-failure
 
   # API de Clientes
@@ -99,8 +95,7 @@ services:
       mysql:
         condition: service_healthy
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     restart: on-failure
 
   # API de Pagamentos
@@ -122,15 +117,14 @@ services:
       mongodb:
         condition: service_healthy
     networks:
-      - microservices_network
-      - fiap-net
+      - microservices_network # Mantém apenas a rede interna
     restart: on-failure
 
 networks:
   microservices_network:
     driver: bridge
-  fiap-net:
-    external: true
+  # Removida a rede fiap-net, pois ela não é necessária para a simulação no GitHub Actions
+  # e causou o erro 'network fiap-net declared as external, but could not be found'
 
 volumes:
   mysql_data:
