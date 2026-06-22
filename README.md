@@ -5,8 +5,14 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-4EA94B?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.13-FF6600?logo=rabbitmq&logoColor=white)](https://www.rabbitmq.com/)
-[![Tests](https://img.shields.io/badge/Tests-80%25%20Coverage-success)](https://xunit.net/)
+[![Tests](https://img.shields.io/badge/Tests-84.5%25%20Coverage-success)](https://xunit.net/) <!-- Atualizado para 84.5% de cobertura -->
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+<!-- COLOQUE AQUI O BADGE DE CI/CD DO GITHUB ACTIONS -->
+<!-- Exemplo: [![CI/CD Status](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml) -->
+
+<!-- COLOQUE AQUI O BADGE DE COBERTURA DO SONARCLOUD -->
+<!-- Exemplo: [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY&metric=coverage)](https://sonarcloud.io/dashboard?id=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY) -->
 
 > **TechChallenge - Fase 4 - Pós-Graduação Arquitetura de Software - FIAP**
 
@@ -16,37 +22,36 @@ Sistema de autoatendimento escalável e robusto para a Lanchonete FIAP, desenvol
 
 ## 📋 Índice
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Métricas de Qualidade](#-métricas-de-qualidade)
-- [Princípios Arquiteturais](#-princípios-arquiteturais)
-- [Arquitetura](#-arquitetura)
-- [Diagramas Arquiteturais](#-diagramas-arquiteturais)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Microsserviços](#-microsserviços)
-- [Requisitos Funcionais](#-requisitos-funcionais)
-- [Requisitos Não-Funcionais](#-requisitos-não-funcionais)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação e Execução](#-instalação-e-execução)
-- [Testes](#-testes)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [API Endpoints](#-api-endpoints)
-- [Migrations](#-migrations)
-- [Docker](#-docker)
-- [Variáveis de Ambiente](#-variáveis-de-ambiente)
-- [Monitoramento e Observabilidade](#-monitoramento-e-observabilidade)
-- [Decisões Arquiteturais (ADRs)](#-decisões-arquiteturais-adrs)
-- [Build e Deploy](#-build-e-deploy)
-- [CI/CD Pipeline](#-ci/cd-pipeline)
-- [Resiliência](#-resiliência)
-- [Escalabilidade](#-escalabilidade)
-- [Roadmap](#-roadmap)
-- [Como Contribuir](#-como-contribuir)
-- [Licença](#-licença)
-- [Autores](#-autores)
-- [Suporte](#-suporte)
-- [Documentação Adicional](#-documentação-adicional)
-- [Destaques do Projeto](#-destaques-do-projeto)
-- [Para a Apresentação](#-para-a-apresentação)
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Métricas de Qualidade](#métricas-de-qualidade)
+- [Princípios Arquiteturais](#princípios-arquiteturais)
+- [Arquitetura](#arquitetura)
+- [Diagramas Arquiteturais](#diagramas-arquiteturais)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Microsserviços](#microsserviços)
+- [Requisitos Funcionais](#requisitos-funcionais)
+- [Requisitos Não-Funcionais](#requisitos-não-funcionais)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Execução](#instalação-e-execução)
+- [Testes](#testes)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [API Endpoints](#api-endpoints)
+- [Migrations](#migrations)
+- [Docker](#docker)
+- [Variáveis de Ambiente](#variáveis-de-ambiente)
+- [Decisões Arquiteturais (ADRs)](#decisões-arquiteturais-adrs)
+- [Build e Deploy](#build-e-deploy)
+- [CI/CD Pipeline](#ci/cd-pipeline)
+- [Resiliência](#resiliência)
+- [Escalabilidade](#escalabilidade)
+- [Roadmap](#roadmap)
+- [Como Contribuir](#como-contribuir)
+- [Licença](#licença)
+- [Autores](#autores)
+- [Suporte](#suporte)
+- [Documentação Adicional](#documentação-adicional)
+- [Destaques do Projeto](#destaques-do-projeto)
+- [Para a Apresentação](#para-a-apresentação)
 
 ---
 
@@ -73,7 +78,7 @@ A Lanchonete FIAP, em sua expansão, enfrentava desafios no controle de pedidos 
 
 | Métrica | Valor | Status |
 |---------|-------|--------|
-| **Cobertura de Testes** | **80%+** | ✅ Meta Alcançada |
+| **Cobertura de Testes** | **84.5%+** | ✅ Meta Alcançada | <!-- Atualizado para 84.5% -->
 | **Testes Unitários** | **~XXX** | ✅ Abrangente |
 | **Linhas Cobertas** | **XXX/YYY** | ✅ Meta Alcançada |
 | **CI/CD** | Automatizado | ✅ GitHub Actions |
@@ -104,7 +109,13 @@ O projeto segue os princípios de **Clean Architecture** e **Microsserviços**, 
 - **Escalabilidade Horizontal**: Microsserviços independentes podem escalar separadamente.
 - **Resiliência**: Falhas em um serviço não derrubam o sistema inteiro.
 
-### Diagrama de Arquitetura (Visão Simplificada)
+### Diagramas Arquiteturais
+
+<!-- Esta seção é para incluir seus diagramas. Se você tiver links para imagens ou arquivos .drawio, pode colocá-los aqui. -->
+<!-- Exemplo: ![Diagrama C4 Contexto](link-para-sua-imagem-diagrama-c4-contexto.png) -->
+<!-- Exemplo: [Diagrama C4 Containers (Draw.io)](link-para-seu-arquivo-drawio) -->
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -311,6 +322,55 @@ Cada microsserviço possui seu próprio projeto de testes:
 
 ## 📁 Estrutura do Projeto
 
+<!-- Adicione aqui uma descrição da estrutura de pastas do seu projeto, ou um diagrama de pastas se tiver. -->
+
+---
+
+## 🔗 API Endpoints
+
+<!-- Liste aqui os principais endpoints de cada microsserviço, com exemplos de requisição/resposta se possível. -->
+<!-- Exemplo: -->
+<!-- ### Customer Service -->
+<!-- - `GET /api/customers/{cpf}`: Busca cliente por CPF -->
+<!-- - `POST /api/customers`: Cadastra novo cliente -->
+
+---
+
+## 🔄 Migrations
+
+<!-- Descreva aqui como as migrations do Entity Framework Core são aplicadas para o MySQL. -->
+<!-- Exemplo: -->
+<!-- Para aplicar as migrations, execute o seguinte comando na pasta do projeto de infraestrutura do microsserviço: -->
+<!-- `dotnet ef database update` -->
+
+---
+
+## 🐳 Docker
+
+<!-- Adicione aqui informações adicionais sobre a configuração Docker, se houver. -->
+<!-- Exemplo: -->
+<!-- Os Dockerfiles para cada microsserviço estão localizados em suas respectivas pastas. -->
+
+---
+
+## ⚙️ Variáveis de Ambiente
+
+<!-- Detalhe aqui as variáveis de ambiente necessárias para cada microsserviço e sua finalidade. -->
+<!-- Exemplo: -->
+<!-- - `ConnectionStrings__DefaultConnection`: String de conexão com o MySQL. -->
+<!-- - `MongoDbSettings__ConnectionString`: String de conexão com o MongoDB. -->
+
+---
+
+## 📝 Decisões Arquiteturais (ADRs)
+
+<!-- Adicione aqui links ou descrições das suas Architectural Decision Records (ADRs). -->
+<!-- Exemplo: -->
+<!-- - [ADR-001: Escolha do Banco de Dados para Produtos](docs/adr/adr-001-database-choice.md) -->
+<!-- - [ADR-002: Estratégia de Comunicação entre Microsserviços](docs/adr/adr-002-microservice-communication.md) -->
+
+---
+
 ## 📦 Build e Deploy
 
 ### Build Local
@@ -388,8 +448,11 @@ Arquivo: `.github/workflows/ci-cd.yml`
 
 ```markdown
 # ATUALIZAR OS LINKS ABAIXO PARA O SEU REPOSITÓRIO DA FASE 4
-![CI/CD](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml/badge.svg)
-![Coverage](https://codecov.io/gh/wesleygyn/Microservices-Products-Orders/branch/main/graph/badge.svg)
+<!-- COLOQUE AQUI O BADGE DE CI/CD DO GITHUB ACTIONS -->
+<!-- Exemplo: ![CI/CD Status](https://github.com/wesleygyn/Microservices-Products-Orders/actions/workflows/ci-cd.yml/badge.svg) -->
+
+<!-- COLOQUE AQUI O BADGE DE COBERTURA DO SONARCLOUD -->
+<!-- Exemplo: [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY&metric=coverage)](https://sonarcloud.io/dashboard?id=SEU_ORGANIZATION_KEY_SEU_PROJECT_KEY) -->
 ```
 
 ---
@@ -517,8 +580,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📞 Suporte
 
 Para reportar bugs ou sugerir melhorias:
-- Abra uma [Issue](https://github.com/seu-usuario/Microservices-Products-Orders/issues) # ATUALIZAR LINK
-- Entre em contato via [Discussions](https://github.com/seu-usuario/Microservices-Products-Orders/discussions) # ATUALIZAR LINK
+- Abra uma [Issue](https://github.com/seu-usuario/Microservices-Products-Orders/issues) <!-- ATUALIZAR LINK -->
+- Entre em contato via [Discussions](https://github.com/seu-usuario/Microservices-Products-Orders/discussions) <!-- ATUALIZAR LINK -->
 
 ---
 
@@ -541,7 +604,7 @@ Para reportar bugs ou sugerir melhorias:
 ## 🏆 Destaques do Projeto
 
 ### ✅ Qualidade de Código
-- **80%+** de cobertura de testes (meta: 80%+)
+- **84.5%+** de cobertura de testes (meta: 80%+) <!-- Atualizado para 84.5% -->
 - CI/CD totalmente automatizado
 - Code quality badges funcionando (se configurados)
 
@@ -581,7 +644,7 @@ Para reportar bugs ou sugerir melhorias:
 
 > **"Nosso projeto não é apenas código funcional, mas um exemplo completo de arquitetura de software de excelência para a Lanchonete FIAP:**
 >
-> - ✅ **80%+ de cobertura** de testes
+> - ✅ **84.5%+ de cobertura** de testes <!-- Atualizado para 84.5% -->
 > - ✅ **Event Storming profissional** com bounded contexts claros
 > - ✅ **C4 Model em 3 níveis** (padrão da indústria)
 > - ✅ **Clean Architecture** com SOLID aplicado
