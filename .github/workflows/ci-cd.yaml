@@ -29,7 +29,7 @@ jobs:
       - name: Install .NET SDK # Adicionando a instalação do SDK .NET explicitamente
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x' # Garanta que esta versão corresponda ao seu projeto
+          dotnet-version: '8.0.x' # Garanta que esta versão corresponda ao seu projeto (ex: 6.0.x, 7.0.x, 8.0.x)
 
       - name: Install SonarScanner for .NET
         run: dotnet tool install --global dotnet-sonarscanner --version 5.14.0 # Ou a versão estável mais recente
@@ -41,14 +41,8 @@ jobs:
           SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }} # Assumindo que este também é um secret
           SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}   # Assumindo que este também é um secret
         run: |
-          # Inicia a análise do SonarScanner
-          dotnet sonarscanner begin `
-          /k:"$env:SONAR_PROJECT_KEY" `
-          /o:"$env:SONAR_ORGANIZATION" `
-          /d:sonar.token="$env:SONAR_TOKEN" `
-          /d:sonar.host.url="https://sonarcloud.io" ` # <--- ADICIONE ESTA LINHA CRÍTICA
-          /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" `
-          /d:sonar.coverage.exclusions="**/Program.cs,**/*Extensions*.cs,**/Migrations/**"
+          # Inicia a análise do SonarScanner - Tudo em uma única linha lógica para evitar erros de parsing do PowerShell
+          dotnet sonarscanner begin /k:"$env:SONAR_PROJECT_KEY" /o:"$env:SONAR_ORGANIZATION" /d:sonar.token="$env:SONAR_TOKEN" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**/Program.cs,**/*Extensions*.cs,**/Migrations/**"
 
           # Constrói o projeto
           dotnet build --no-incremental
@@ -62,5 +56,4 @@ jobs:
             --results-directory TestResults/ # Boa prática para organizar os resultados dos testes
 
           # Finaliza a análise do SonarScanner
-          dotnet sonarscanner end `
-            /d:sonar.token="$env:SONAR_TOKEN"
+          dotnet sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
