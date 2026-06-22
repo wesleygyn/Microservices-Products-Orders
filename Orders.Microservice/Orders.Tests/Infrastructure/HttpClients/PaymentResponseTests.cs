@@ -15,7 +15,7 @@ namespace Orders.Tests.Infrastructure.HttpClients
             var r2 = new PaymentResponse("pay1", "1", 10.00m, "PENDING", "qr", now);
             var r3 = new PaymentResponse("pay2", "2", 5.00m, "PAID", "qr2", now);
 
-            r1.PaymentId.Should().Be("pay1");
+            r1.Id.Should().Be("pay1");
             r1.OrderId.Should().Be("1");
             r1.TotalAmount.Should().Be(10.00m);
             r1.Status.Should().Be("PENDING");

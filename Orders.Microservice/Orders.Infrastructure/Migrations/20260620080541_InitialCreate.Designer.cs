@@ -11,8 +11,8 @@ using Orders.Infrastructure.Data;
 namespace Orders.Infrastructure.Migrations
 {
     [DbContext(typeof(OrdersDbContext))]
-    [Migration("20260124061138_Inicial")]
-    partial class Inicial
+    [Migration("20260620080541_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,11 @@ namespace Orders.Infrastructure.Migrations
                         .HasColumnType("longtext")
                         .HasDefaultValue("PENDING")
                         .HasColumnName("payment_status");
+
+                    b.Property<string>("QrCode")
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)")
+                        .HasColumnName("qr_code");
 
                     b.Property<string>("Status")
                         .IsRequired()

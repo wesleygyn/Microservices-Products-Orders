@@ -1,0 +1,102 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="hSWN9Hbg4_MQHNAACRm0">
+    <mxGraphModel dx="2951" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;fontSize=28;fontStyle=1;fillColor=none;strokeColor=none;" value="🍔 C4 - NÍVEL 3: COMPONENTES - PRODUCTS API" vertex="1">
+          <mxGeometry height="50" width="660" x="515" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#64748b;" value="Detalhe interno do microsserviço de Produtos" vertex="1">
+          <mxGeometry height="30" width="650" x="520" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="products-api-container" parent="1" style="rounded=1;dashed=1;dashPattern=8 8;strokeWidth=3;strokeColor=#3b82f6;fillColor=#dbeafe;fontSize=16;fontStyle=1;align=center;verticalAlign=top;labelBackgroundColor=#6666FF;" value="Products API Container" vertex="1">
+          <mxGeometry height="740" width="1210" x="240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="products-controller" parent="1" style="rounded=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#fff;fontSize=13;" value="ProductsController&#xa;&#xa;Endpoints para gerenciar&#xa;produtos e categorias" vertex="1">
+          <mxGeometry height="100" width="220" x="310" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="product-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="ProductService&#xa;&#xa;Lógica de negócio para&#xa;cadastro e consulta de produtos" vertex="1">
+          <mxGeometry height="100" width="220" x="735" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="category-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="CategoryService&#xa;&#xa;Lógica de negócio para&#xa;gerenciamento de categorias" vertex="1">
+          <mxGeometry height="100" width="220" x="735" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="product-repository" parent="1" style="rounded=1;fillColor=#6366f1;strokeColor=#4f46e5;strokeWidth=2;fontColor=#fff;fontSize=12;" value="ProductRepository&#xa;&#xa;Acesso e persistência de&#xa;dados de produtos no MySQL" vertex="1">
+          <mxGeometry height="100" width="220" x="735" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="category-repository" parent="1" style="rounded=1;fillColor=#6366f1;strokeColor=#4f46e5;strokeWidth=2;fontColor=#fff;fontSize=12;" value="CategoryRepository&#xa;&#xa;Acesso e persistência de&#xa;dados de categorias no MySQL" vertex="1">
+          <mxGeometry height="100" width="220" x="735" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-products" parent="1" style="shape=cylinder3;fillColor=#16a34a;strokeColor=#15803d;strokeWidth=2;fontColor=#fff;fontSize=12;size=10;" value="MySQL&#xa;(Products DB)" vertex="1">
+          <mxGeometry height="80" width="120" x="1270" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-ext-controller" edge="1" parent="1" source="products-api-container" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3b82f6;" target="products-controller" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="230" />
+            </Array>
+            <mxPoint x="270" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-controller-product-service" edge="1" parent="1" source="products-controller" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" target="product-service" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="230" as="sourcePoint" />
+            <mxPoint x="630" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-controller-category-service" edge="1" parent="1" source="products-controller" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" target="category-service" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="380" as="sourcePoint" />
+            <mxPoint x="630" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-product-service-repository" edge="1" parent="1" source="product-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6366f1;exitX=1.003;exitY=0.468;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="product-repository" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="227" />
+              <mxPoint x="1005" y="250" />
+              <mxPoint x="1005" y="410" />
+              <mxPoint x="1005" y="530" />
+            </Array>
+            <mxPoint x="845" y="280" as="sourcePoint" />
+            <mxPoint x="845" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-category-service-repository" edge="1" parent="1" source="category-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6366f1;exitX=0.003;exitY=0.787;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="category-repository" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="409" />
+              <mxPoint x="685" y="680" />
+            </Array>
+            <mxPoint x="845" y="430" as="sourcePoint" />
+            <mxPoint x="845" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-product-repository-mysql" edge="1" parent="1" source="product-repository" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#16a34a;exitX=0.75;exitY=1;exitDx=0;exitDy=0;jumpStyle=arc;entryX=0.328;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="mysql-products" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="620" />
+              <mxPoint x="1310" y="620" />
+            </Array>
+            <mxPoint x="850" y="530" as="sourcePoint" />
+            <mxPoint x="1270" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-category-repository-mysql" edge="1" parent="1" source="category-repository" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#16a34a;exitX=0.75;exitY=1;exitDx=0;exitDy=0;jumpStyle=arc;" target="mysql-products" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="760" />
+              <mxPoint x="1330" y="760" />
+              <mxPoint x="1360" y="760" />
+              <mxPoint x="1360" y="580" />
+            </Array>
+            <mxPoint x="850" y="680" as="sourcePoint" />
+            <mxPoint x="1270" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,142 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="DLqrbtw_4MvwMqrKnthq">
+    <mxGraphModel dx="2951" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;fontSize=28;fontStyle=1;fillColor=none;strokeColor=none;" value="💳 C4 - NÍVEL 3: COMPONENTES - PAYMENT API" vertex="1">
+          <mxGeometry height="50" width="660" x="515" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#64748b;" value="Detalhe interno do microsserviço de Pagamentos" vertex="1">
+          <mxGeometry height="30" width="650" x="520" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-api-container" parent="1" style="rounded=1;dashed=1;dashPattern=8 8;strokeWidth=3;strokeColor=#3b82f6;fillColor=#dbeafe;fontSize=16;fontStyle=1;align=center;verticalAlign=top;labelBackgroundColor=#6666FF;" value="Payment API Container" vertex="1">
+          <mxGeometry height="740" width="1210" x="240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-controller" parent="1" style="rounded=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#fff;fontSize=13;" value="PaymentController&#xa;&#xa;Endpoints para solicitar e&#xa;receber confirmação de pagamentos" vertex="1">
+          <mxGeometry height="100" width="220" x="310" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="PaymentService&#xa;&#xa;Lógica de negócio para&#xa;processamento de pagamentos" vertex="1">
+          <mxGeometry height="100" width="220" x="625" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="webhook-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="WebhookService&#xa;&#xa;Processa callbacks do Mercado Pago&#xa;e atualiza status de pagamento" vertex="1">
+          <mxGeometry height="100" width="220" x="625" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-repository" parent="1" style="rounded=1;fillColor=#6366f1;strokeColor=#4f46e5;strokeWidth=2;fontColor=#fff;fontSize=12;" value="PaymentRepository&#xa;&#xa;Acesso e persistência de&#xa;dados de pagamentos no MySQL" vertex="1">
+          <mxGeometry height="100" width="220" x="625" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago-client" parent="1" style="rounded=1;fillColor=#ec4899;strokeColor=#db2777;strokeWidth=2;fontColor=#fff;fontSize=11;align=center;" value="MercadoPagoClient&#xa;&#xa;Comunicação com a API do&#xa;Mercado Pago (geração de QR Code)" vertex="1">
+          <mxGeometry height="100" width="200" x="950" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="orders-api-client" parent="1" style="rounded=1;fillColor=#ec4899;strokeColor=#db2777;strokeWidth=2;fontColor=#fff;fontSize=11;align=center;" value="OrdersApiClient&#xa;&#xa;Comunicação com Orders API&#xa;para atualizar status do pedido" vertex="1">
+          <mxGeometry height="100" width="200" x="950" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-payments" parent="1" style="shape=cylinder3;fillColor=#16a34a;strokeColor=#15803d;strokeWidth=2;fontColor=#fff;fontSize=12;size=10;" value="MySQL&#xa;(Payments DB)" vertex="1">
+          <mxGeometry height="80" width="120" x="1270" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago-ext" parent="1" style="rounded=1;dashed=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#fff;fontSize=12;" value="Mercado Pago API" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="orders-api-ext" parent="1" style="rounded=1;dashed=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#fff;fontSize=12;" value="Orders API" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-ext-controller-request" edge="1" parent="1" source="payment-api-container" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3b82f6;" target="payment-controller" value="HTTPS/REST&lt;br&gt;(Solicita Pagamento)">
+          <mxGeometry relative="1" x="0.1748" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="270" y="230" />
+            </Array>
+            <mxPoint x="270" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-ext-controller-webhook" edge="1" parent="1" source="mercadopago-ext" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3b82f6;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="payment-controller" value="HTTPS/Webhook (Notificação de Pagamento)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="150" />
+              <mxPoint x="1200" y="150" />
+              <mxPoint x="420" y="150" />
+            </Array>
+            <mxPoint x="1260" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-controller-payment-service" edge="1" parent="1" source="payment-controller" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" target="payment-service" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="230" as="sourcePoint" />
+            <mxPoint x="520" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-controller-webhook-service" edge="1" parent="1" source="payment-controller" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" target="webhook-service" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="280" as="sourcePoint" />
+            <mxPoint x="520" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-webhook-service-repository" edge="1" parent="1" source="webhook-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6366f1;" target="payment-repository" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="575" y="380" />
+              <mxPoint x="575" y="530" />
+            </Array>
+            <mxPoint x="735" y="430" as="sourcePoint" />
+            <mxPoint x="735" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-payment-repository-mysql" edge="1" parent="1" source="payment-repository" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#16a34a;" target="mysql-payments" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="620" />
+              <mxPoint x="1330" y="620" />
+            </Array>
+            <mxPoint x="850" y="530" as="sourcePoint" />
+            <mxPoint x="1270" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-payment-service-mercadopago-client" edge="1" parent="1" source="payment-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ec4899;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.992;exitY=0.267;exitDx=0;exitDy=0;exitPerimeter=0;" target="mercadopago-client" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="845" y="230" as="sourcePoint" />
+            <mxPoint x="950" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-mercadopago-client-ext" edge="1" parent="1" source="mercadopago-client" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#94a3b8;dashed=1;" target="mercadopago-ext" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="230" as="sourcePoint" />
+            <mxPoint x="1260" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-orders-client-ext" edge="1" parent="1" source="orders-api-client" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#94a3b8;dashed=1;" target="orders-api-ext" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="360" as="sourcePoint" />
+            <mxPoint x="1260" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-payment-service-repository" edge="1" parent="1" source="payment-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6366f1;jumpStyle=arc;" target="payment-repository" value="">
+          <mxGeometry relative="1" x="0.0076" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="890" y="227" />
+              <mxPoint x="890" y="310" />
+              <mxPoint x="890" y="530" />
+            </Array>
+            <mxPoint x="765" y="280" as="sourcePoint" />
+            <mxPoint x="765" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-webhook-service-orders-client" edge="1" parent="1" source="webhook-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ec4899;jumpStyle=arc;" target="orders-api-client" value="Invoca">
+          <mxGeometry relative="1" x="-0.1429" y="50" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="845" y="380" as="sourcePoint" />
+            <mxPoint x="950" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="89iMvyZgs7uwOCPk8nwl-3" connectable="0" parent="arrow-webhook-service-orders-client" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Usa" vertex="1">
+          <mxGeometry relative="1" x="-0.4921" as="geometry">
+            <mxPoint x="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

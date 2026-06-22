@@ -1,0 +1,218 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="YLyAi8DNYwTOJm4WaA7r">
+    <mxGraphModel dx="5165" dy="2188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object placeholders="1" c4Name="SISTEMA_LANCHONETE_FIAP" c4Type="SystemScopeBoundary" c4Application="Sistema Lanchonete FIAP" label="SISTEMA_LANCHONETE_FIAP [Sistema Lanchonete FIAP]" id="boundary-lanchonete">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="1350" width="2070" x="200" y="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="SISTEMAS_EXTERNOS" c4Type="SystemScopeBoundary" c4Application="Cluster de Sistemas Externos" label="SISTEMAS_EXTERNOS [Cluster de Sistemas Externos]" id="fGotTG32s7UuQ2DBgzui-5">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="1140" width="221" x="260" y="330" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="SISTEMAS_EXTERNOS" c4Type="SystemScopeBoundary" c4Application="Cluster de Sistemas Externos" label="SISTEMAS_EXTERNOS [Cluster de Sistemas Externos]" id="fGotTG32s7UuQ2DBgzui-4">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#f8cecc;strokeColor=#b85450;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="1140" width="350" x="1863" y="330" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=36;fontStyle=1;fontColor=#1e40af;" value="📦 C4 MODEL - NÍVEL 2: DIAGRAMA DE CONTÊINERES" vertex="1">
+          <mxGeometry height="60" width="1200" x="730" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#64748b;" value="Sistema Lanchonete FIAP - Autoatendimento Fast Food | Vista Interna" vertex="1">
+          <mxGeometry height="40" width="1200" x="730" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100" width="600" x="200" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e40af;" value="📋 LEGENDA C4" vertex="1">
+          <mxGeometry height="30" width="200" x="220" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-person" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;" value="Pessoa" vertex="1">
+          <mxGeometry height="40" width="30" x="355.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;strokeColor=#0E7DAD;strokeWidth=3;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="Contêiner" vertex="1">
+          <mxGeometry height="30" width="150" x="320" y="1605" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;dashed=1;" value="Sistema Externo" vertex="1">
+          <mxGeometry height="30" width="150" x="520" y="1605" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Name="MICROSSERVICOS_DOTNET" c4Type="SystemScopeBoundary" c4Application="Microsserviços .NET 8" label="MICROSSERVICOS_DOTNET [Microsserviços .NET 8]" id="boundary-dotnet">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="840" width="1270" x="536" y="330" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="BANCOS_DE_DADOS" c4Type="SystemScopeBoundary" c4Application="Cluster de Bancos de Dados" label="BANCOS_DE_DADOS [Cluster de Bancos de Dados]" id="boundary-dbs">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#cce5ff;strokeColor=#36393d;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="250" width="1274" x="536" y="1220" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="CLIENTE" c4Type="Person" c4Description="Pessoa que realiza pedidos no totem de autoatendimento" label="CLIENTE [Person]&#xa;Pessoa que realiza pedidos no totem de autoatendimento" id="cliente">
+          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="180" x="280.5" y="360" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="ADMINISTRADOR" c4Type="Person" c4Description="Gerencia produtos, clientes e acompanha pedidos" label="ADMINISTRADOR [Person]&#xa;Gerencia produtos, clientes e acompanha pedidos" id="admin">
+          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="180" x="280.5" y="535" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="COZINHA" c4Type="Person" c4Description="Acompanha fila de pedidos e atualiza status de producao" label="COZINHA [Person]&#xa;Acompanha fila de pedidos e atualiza status de producao" id="cozinha">
+          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="180" x="280.5" y="720" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="CUSTOMER_API" c4Type="Container" c4Technology="ASP.NET Core 8" c4Description="API para gerenciamento de clientes (cadastro, identificacao)" label="CUSTOMER_API [Container: ASP.NET Core 8]&#xa;API para gerenciamento de clientes (cadastro, identificacao)" id="customer-api">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="586" y="380" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="PRODUCTS_API" c4Type="Container" c4Technology="ASP.NET Core 8" c4Description="API para gerenciamento de produtos (cadastro, listagem, busca)" label="PRODUCTS_API [Container: ASP.NET Core 8]&#xa;API para gerenciamento de produtos (cadastro, listagem, busca)" id="products-api">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="586" y="560" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="ORDERS_API" c4Type="Container" c4Technology="ASP.NET Core 8" c4Description="API para criacao, gerenciamento e acompanhamento de pedidos" label="ORDERS_API [Container: ASP.NET Core 8]&#xa;API para criacao, gerenciamento e acompanhamento de pedidos" id="orders-api">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="936" y="470" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="PAYMENT_API" c4Type="Container" c4Technology="ASP.NET Core 8" c4Description="API para integracao com Mercado Pago e gerenciamento de pagamentos" label="PAYMENT_API [Container: ASP.NET Core 8]&#xa;API para integracao com Mercado Pago e gerenciamento de pagamentos" id="payment-api">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="1286" y="470" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="MYSQL_CUSTOMERS" c4Type="DATABASE" c4Technology="MySQL 8" c4Description="Armazena dados de clientes" label="MYSQL_CUSTOMERS [DATABASE: MySQL 8]&#xa;Armazena dados de clientes" id="mysql-customers">
+          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="240" x="586" y="1290" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="MYSQL_PRODUCTS" c4Type="DATABASE" c4Technology="MySQL 8" c4Description="Armazena dados de produtos e categorias" label="MYSQL_PRODUCTS [DATABASE: MySQL 8]&#xa;Armazena dados de produtos e categorias" id="mysql-products">
+          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="240" x="896" y="1290" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="MONGODB_ORDERS" c4Type="DATABASE" c4Technology="MongoDB 6" c4Description="Armazena dados de pedidos e itens" label="MONGODB_ORDERS [DATABASE: MongoDB 6]&#xa;Armazena dados de pedidos e itens" id="mongodb-orders">
+          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="240" x="1206" y="1290" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="MYSQL_PAYMENTS" c4Type="DATABASE" c4Technology="MySQL 8" c4Description="Armazena dados de pagamentos" label="MYSQL_PAYMENTS [DATABASE: MySQL 8]&#xa;Armazena dados de pagamentos" id="mysql-payments">
+          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="240" x="1516" y="1290" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="MERCADO_PAGO" c4Type="External System" c4Description="Plataforma de pagamentos via QR Code" label="MERCADO_PAGO [External System]&#xa;Plataforma de pagamentos via QR Code" id="mercadopago">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="1910" y="640" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="TOTEM_MONITOR" c4Type="External System" c4Description="Interface de autoatendimento e acompanhamento de pedidos" label="TOTEM_MONITOR [External System]&#xa;Interface de autoatendimento e acompanhamento de pedidos" id="totem-monitor">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="1918" y="360" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="arrow-cliente-customer" edge="1" parent="1" source="cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.999;exitY=0.666;exitDx=0;exitDy=0;exitPerimeter=0;" target="customer-api" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.00000000000045" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-admin-products" edge="1" parent="1" source="admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.001;exitY=0.704;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=arc;" target="products-api" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.00000000000045" y="620" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-cozinha-orders" edge="1" parent="1" source="cozinha" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.988;exitY=0.71;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=arc;" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="805" />
+            </Array>
+            <mxPoint x="469.9999999999999" y="805.28" as="sourcePoint" />
+            <mxPoint x="1010" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-customer-db" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="616" y="530" />
+              <mxPoint x="516" y="530" />
+              <mxPoint x="516" y="1200" />
+              <mxPoint x="656" y="1200" />
+            </Array>
+            <mxPoint x="616" y="500" as="sourcePoint" />
+            <mxPoint x="656" y="1289.95" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fGotTG32s7UuQ2DBgzui-6" connectable="0" parent="arrow-customer-db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="0.2617" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-products-db" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;" target="mysql-products" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="766" y="1030" />
+              <mxPoint x="1016" y="1030" />
+            </Array>
+            <mxPoint x="766" y="680" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-orders-db" edge="1" parent="1" source="orders-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="mongodb-orders" value="TCP/NoSQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1056" y="970" />
+              <mxPoint x="1326" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-payment-db" edge="1" parent="1" source="payment-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="mysql-payments" value="TCP/SQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1406" y="910" />
+              <mxPoint x="1636" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-orders-products" edge="1" parent="1" source="orders-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.208;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="products-api" value="HTTPS/REST (Valida itens)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="986" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-orders-payment" edge="1" parent="1" source="orders-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="payment-api" value="HTTPS/REST (Solicita pagamento)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-payment-mp" edge="1" parent="1" source="payment-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.46;entryY=0.004;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;dashPattern=8 8;entryPerimeter=0;" target="mercadopago" value="HTTPS/REST (Gera QR Code)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2020" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-mp-payment" edge="1" parent="1" source="mercadopago" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.812;entryY=0.998;entryDx=0;entryDy=0;exitX=-0.002;exitY=0.478;exitDx=0;exitDy=0;dashed=1;dashPattern=8 8;entryPerimeter=0;exitPerimeter=0;" target="payment-api" value="HTTPS/Webhook (Confirma pagamento)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1481" y="697" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fGotTG32s7UuQ2DBgzui-3" connectable="0" parent="arrow-mp-payment" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.2214" y="14" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-orders-totem" edge="1" parent="1" source="orders-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;dashPattern=8 8;exitPerimeter=0;" target="totem-monitor" value="HTTPS/REST (Atualiza status)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1056" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

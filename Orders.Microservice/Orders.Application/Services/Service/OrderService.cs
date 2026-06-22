@@ -90,7 +90,6 @@ namespace Orders.Application.Services.Service
 
             var created = await _repository.AddAsync(order);
 
-            //Tentar criar pagamento após criar a order
             try
             {
                 var payment = await _paymentClient.CreatePaymentAsync(
@@ -99,8 +98,10 @@ namespace Orders.Application.Services.Service
 
                 if (payment != null)
                 {
-                    created.SetPaymentId(payment.PaymentId);
-                    await _repository.UpdateAsync(created);
+                    created.SetPaymentId(payment.Id);
+                    created.QrCode = payment.QrCode;
+                    created = await _repository.UpdateAsync(created);
+                    return MapToDto(created);
                 }
             }
             catch (Exception ex)
@@ -145,6 +146,7 @@ namespace Orders.Application.Services.Service
             order.Observation,
             order.Number,
             order.PaymentId,
+            order.QrCode,
             order.PaymentStatus,
             order.TotalAmount,
             order.CreatedAt,

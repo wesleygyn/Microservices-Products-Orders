@@ -53,7 +53,7 @@ namespace Orders.Infrastructure.HttpClients
 
                 _logger.LogInformation(
                     "Pagamento criado com sucesso. OrderId: {OrderId}, PaymentId: {PaymentId}",
-                    orderId, payment?.PaymentId);
+                    orderId, payment?.Id);
 
                 return payment;
             }

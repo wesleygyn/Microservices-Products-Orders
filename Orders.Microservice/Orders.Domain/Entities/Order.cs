@@ -13,6 +13,7 @@ namespace Orders.Domain.Entities
         public string? Observation { get; set; }
         public int Number { get; set; }
         public string? PaymentId { get; set; }
+        public string? QrCode { get; set; }
         public PaymentStatusEnum PaymentStatus { get; set; } = PaymentStatusEnum.PENDING;
         public decimal TotalAmount { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

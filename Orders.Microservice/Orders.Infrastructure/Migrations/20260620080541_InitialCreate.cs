@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Orders.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,6 +27,8 @@ namespace Orders.Infrastructure.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     number = table.Column<int>(type: "int", nullable: false),
                     payment_id = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    qr_code = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     payment_status = table.Column<string>(type: "longtext", nullable: false, defaultValue: "PENDING")
                         .Annotation("MySql:CharSet", "utf8mb4"),

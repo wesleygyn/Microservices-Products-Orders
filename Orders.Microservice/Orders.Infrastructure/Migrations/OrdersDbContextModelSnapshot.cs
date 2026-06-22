@@ -55,6 +55,11 @@ namespace Orders.Infrastructure.Migrations
                         .HasDefaultValue("PENDING")
                         .HasColumnName("payment_status");
 
+                    b.Property<string>("QrCode")
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)")
+                        .HasColumnName("qr_code");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("varchar(255)")

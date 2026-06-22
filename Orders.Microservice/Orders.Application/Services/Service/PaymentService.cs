@@ -4,9 +4,6 @@ using Orders.Application.Services.Interface;
 using Orders.Domain.Enums;
 using Orders.Domain.Interfaces.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Orders.Application.Services.Service

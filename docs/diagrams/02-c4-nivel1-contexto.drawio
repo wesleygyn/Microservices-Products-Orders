@@ -1,0 +1,220 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="nyBKLd5T2uNiYG2V0bM3">
+    <mxGraphModel dx="5165" dy="4526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="1578" width="2480" y="-2338" as="geometry" />
+        </mxCell>
+        <mxCell id="titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=36;fontStyle=1;fontColor=#1e40af;" value="🌍 C4 MODEL - NÍVEL 1: DIAGRAMA DE CONTEXTO" vertex="1">
+          <mxGeometry height="60" width="1200" x="641" y="-2278" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#64748b;" value="Sistema Lanchonete FIAP - Autoatendimento Fast Food | Vista Externa" vertex="1">
+          <mxGeometry height="40" width="1200" x="641" y="-2218" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="600" x="80" y="-2128" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e40af;" value="📋 LEGENDA C4" vertex="1">
+          <mxGeometry height="30" width="200" x="100" y="-2118" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-person" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;" value="Pessoa" vertex="1">
+          <mxGeometry height="40" width="30" x="120" y="-2078" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-system" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#1e3a8a;strokeWidth=3;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="Sistema Principal" vertex="1">
+          <mxGeometry height="30" width="150" x="200" y="-2073" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;dashed=1;" value="Sistema Externo" vertex="1">
+          <mxGeometry height="30" width="150" x="400" y="-2073" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=4;" value="Cliente" vertex="1">
+          <mxGeometry height="120" width="60" x="110" y="-1928" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#64748b;" value="Pessoa que realiza pedidos&#xa;no totem de autoatendimento" vertex="1">
+          <mxGeometry height="50" width="220" x="50" y="-1788" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#7c3aed;strokeColor=#5b21b6;strokeWidth=4;" value="Administrador" vertex="1">
+          <mxGeometry height="120" width="60" x="110" y="-1653" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#64748b;" value="Gerencia produtos, clientes&#xa;e acompanha pedidos" vertex="1">
+          <mxGeometry height="50" width="220" x="30" y="-1458" as="geometry" />
+        </mxCell>
+        <mxCell id="cozinha" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#059669;strokeColor=#047857;strokeWidth=4;" value="Cozinha" vertex="1">
+          <mxGeometry height="120" width="60" x="90" y="-1388" as="geometry" />
+        </mxCell>
+        <mxCell id="cozinha-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#64748b;" value="Acompanha fila de pedidos&#xa;e atualiza status de producao" vertex="1">
+          <mxGeometry height="50" width="220" x="40" y="-1238" as="geometry" />
+        </mxCell>
+        <mxCell id="sistema-lanchonete" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#1e3a8a;strokeWidth=5;" value="" vertex="1">
+          <mxGeometry height="400" width="700" x="891" y="-1803" as="geometry" />
+        </mxCell>
+        <mxCell id="sistema-icon" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=60;" value="🍔" vertex="1">
+          <mxGeometry height="70" width="70" x="1206" y="-1773" as="geometry" />
+        </mxCell>
+        <mxCell id="sistema-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontColor=#ffffff;fontStyle=1;" value="Sistema Lanchonete FIAP" vertex="1">
+          <mxGeometry height="40" width="580" x="951" y="-1693" as="geometry" />
+        </mxCell>
+        <mxCell id="sistema-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#e0e7ff;" value="Sistema de autoatendimento fast food&#xa;com gestao de pedidos e pagamentos&#xa;&#xa;• 4 Microsservicos independentes&#xa;• Clean Architecture&#xa;• SQL + NoSQL Databases" vertex="1">
+          <mxGeometry height="160" width="580" x="951" y="-1643" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=3;dashed=1;dashPattern=8 8;" value="" vertex="1">
+          <mxGeometry height="160" width="360" x="2030" y="-1965.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago-icon" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;" value="💳" vertex="1">
+          <mxGeometry height="60" width="60" x="2180" y="-1945.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#ffffff;fontStyle=1;" value="Mercado Pago" vertex="1">
+          <mxGeometry height="30" width="300" x="2060" y="-1880.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mercadopago-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#e2e8f0;" value="Processador de pagamentos&#xa;via QR Code" vertex="1">
+          <mxGeometry height="40" width="300" x="2060" y="-1850.5" as="geometry" />
+        </mxCell>
+        <mxCell id="totem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=3;dashed=1;dashPattern=8 8;" value="" vertex="1">
+          <mxGeometry height="160" width="360" x="2030" y="-1680.5" as="geometry" />
+        </mxCell>
+        <mxCell id="totem-icon" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;" value="🖥️" vertex="1">
+          <mxGeometry height="60" width="60" x="2180" y="-1660.5" as="geometry" />
+        </mxCell>
+        <mxCell id="totem-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#ffffff;fontStyle=1;" value="Totem / Monitor" vertex="1">
+          <mxGeometry height="30" width="300" x="2060" y="-1595.5" as="geometry" />
+        </mxCell>
+        <mxCell id="totem-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#e2e8f0;" value="Interface de autoatendimento&#xa;e acompanhamento de pedidos" vertex="1">
+          <mxGeometry height="40" width="300" x="2060" y="-1565.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-ext" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=3;dashed=1;dashPattern=8 8;" value="" vertex="1">
+          <mxGeometry height="160" width="360" x="2030" y="-1400.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-icon" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=50;" value="🗄️" vertex="1">
+          <mxGeometry height="60" width="60" x="2180" y="-1380.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#ffffff;fontStyle=1;" value="Bancos de Dados" vertex="1">
+          <mxGeometry height="30" width="300" x="2060" y="-1315.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql-desc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#e2e8f0;" value="MySQL (Products, Customers,&#xa;Payments) + MongoDB (Orders)" vertex="1">
+          <mxGeometry height="40" width="300" x="2060" y="-1285.5" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-cliente" edge="1" parent="1" source="cliente" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#3b82f6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="sistema-lanchonete" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-cliente-label" connectable="0" parent="arrow-cliente" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#1e40af;labelBackgroundColor=#f8fafc;" value="Seleciona produtos,&#xa;faz pedido e paga&#xa;via QR Code" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-cliente-tech" connectable="0" parent="arrow-cliente" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[HTTPS / REST API]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-admin" edge="1" parent="1" source="admin" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#7c3aed;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sistema-lanchonete" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-admin-label" connectable="0" parent="arrow-admin" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#7c3aed;labelBackgroundColor=#f8fafc;" value="Gerencia produtos&#xa;e clientes" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-admin-tech" connectable="0" parent="arrow-admin" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[HTTPS / REST API]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-cozinha" edge="1" parent="1" source="cozinha" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#059669;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" target="sistema-lanchonete" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-cozinha-label" connectable="0" parent="arrow-cozinha" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#059669;labelBackgroundColor=#f8fafc;" value="Consulta e atualiza&#xa;status dos pedidos" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-cozinha-tech" connectable="0" parent="arrow-cozinha" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[HTTPS / REST API]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-mp" edge="1" parent="1" source="sistema-lanchonete" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#94a3b8;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="mercadopago" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-mp-label" connectable="0" parent="arrow-mp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#64748b;labelBackgroundColor=#f8fafc;" value="Gera QR Code e&#xa;recebe webhook&#xa;de confirmacao" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-45" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-mp-tech" connectable="0" parent="arrow-mp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[HTTPS / REST API]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint x="230" y="180" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-totem" edge="1" parent="1" source="sistema-lanchonete" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#94a3b8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="totem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-totem-label" connectable="0" parent="arrow-totem" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#64748b;labelBackgroundColor=#f8fafc;" value="Exibe status do pedido&#xa;em tempo real" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-totem-tech" connectable="0" parent="arrow-totem" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[HTTPS / REST API]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-db" edge="1" parent="1" source="sistema-lanchonete" style="endArrow=classic;html=1;strokeWidth=4;strokeColor=#94a3b8;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="mysql-ext" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-db-label" connectable="0" parent="arrow-db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;fontColor=#64748b;labelBackgroundColor=#f8fafc;" value="Persiste dados de&#xa;pedidos, produtos,&#xa;clientes e pagamentos" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-45" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-db-tech" connectable="0" parent="arrow-db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;fontColor=#64748b;labelBackgroundColor=#f8fafc;fontStyle=2;" value="[TCP / ORM]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="info-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="280" width="800" x="70" y="-1128" as="geometry" />
+        </mxCell>
+        <mxCell id="info-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#d97706;" value="ℹ️ INFORMAÇÕES DO SISTEMA" vertex="1">
+          <mxGeometry height="40" width="400" x="90" y="-1108" as="geometry" />
+        </mxCell>
+        <mxCell id="info-funcional" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#374151;" value="Funcionalidades Principais:" vertex="1">
+          <mxGeometry height="30" width="350" x="110" y="-1058" as="geometry" />
+        </mxCell>
+        <mxCell id="info-list" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#6b7280;" value="• Identificacao de cliente por CPF&#xa;• Montagem de combo (Lanche, Acomp., Bebida)&#xa;• Pagamento via QR Code Mercado Pago&#xa;• Acompanhamento de pedido em tempo real&#xa;• Gestao administrativa de produtos&#xa;• Fila de producao para cozinha" vertex="1">
+          <mxGeometry height="160" width="350" x="130" y="-1028" as="geometry" />
+        </mxCell>
+        <mxCell id="info-tech" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#374151;" value="Tecnologias:" vertex="1">
+          <mxGeometry height="30" width="350" x="510" y="-1058" as="geometry" />
+        </mxCell>
+        <mxCell id="info-tech-list" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#6b7280;" value="• .NET 8.0 (LTS)&#xa;• ASP.NET Core&#xa;• MySQL + MongoDB&#xa;• Docker + Docker Compose&#xa;• GitHub Actions (CI/CD)&#xa;• xUnit + BDD" vertex="1">
+          <mxGeometry height="160" width="320" x="530" y="-1028" as="geometry" />
+        </mxCell>
+        <mxCell id="char-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="280" width="920" x="950" y="-1128" as="geometry" />
+        </mxCell>
+        <mxCell id="char-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#1e40af;" value="🏆 CARACTERÍSTICAS ARQUITETURAIS" vertex="1">
+          <mxGeometry height="40" width="500" x="970" y="-1108" as="geometry" />
+        </mxCell>
+        <mxCell id="char1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ Clean Architecture - Separacao em camadas&#xa;     Domain, Application, Infrastructure, API" vertex="1">
+          <mxGeometry height="50" width="420" x="990" y="-1048" as="geometry" />
+        </mxCell>
+        <mxCell id="char2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ Microsservicos - 4 servicos independentes&#xa;     Cada um com seu proprio banco de dados" vertex="1">
+          <mxGeometry height="50" width="420" x="990" y="-988" as="geometry" />
+        </mxCell>
+        <mxCell id="char3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ Comunicacao HTTP direta entre servicos&#xa;     Webhook para confirmacao de pagamento" vertex="1">
+          <mxGeometry height="50" width="420" x="990" y="-928" as="geometry" />
+        </mxCell>
+        <mxCell id="char4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ SOLID - Principios aplicados&#xa;     Dependency Inversion, Interface Segregation" vertex="1">
+          <mxGeometry height="50" width="420" x="1430" y="-1048" as="geometry" />
+        </mxCell>
+        <mxCell id="char5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ Testavel - 80%+ de cobertura&#xa;     xUnit + BDD com testes unitarios" vertex="1">
+          <mxGeometry height="50" width="420" x="1430" y="-988" as="geometry" />
+        </mxCell>
+        <mxCell id="char6" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#374151;" value="✅ CI/CD - GitHub Actions automatizado&#xa;     Deploy automatico no merge para main" vertex="1">
+          <mxGeometry height="50" width="420" x="1430" y="-928" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

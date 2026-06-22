@@ -1,0 +1,352 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="H1uHAEDZUGETy4_kY7xj">
+    <mxGraphModel dx="3443" dy="1458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#1e40af;" value="🎭 EVENT STORMING - Sistema Lanchonete FIAP" vertex="1">
+          <mxGeometry height="60" width="1600" x="800" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#64748b;" value="Sistema de Autoatendimento Fast Food | Microsserviços + Clean Architecture" vertex="1">
+          <mxGeometry height="30" width="1600" x="800" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="1000" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e40af;" value="📋 LEGENDA" vertex="1">
+          <mxGeometry height="30" width="200" x="100" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-evento" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" value="🟧 Evento de Domínio" vertex="1">
+          <mxGeometry height="40" width="180" x="100" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-comando" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" value="🔵 Comando" vertex="1">
+          <mxGeometry height="40" width="140" x="300" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-agregado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#16a34a;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" value="🟩 Agregado" vertex="1">
+          <mxGeometry height="40" width="140" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-politica" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;" value="🟨 Política" vertex="1">
+          <mxGeometry height="40" width="120" x="620" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-ator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#8b5cf6;strokeColor=#6d28d9;strokeWidth=2;" value="👤 Ator" vertex="1">
+          <mxGeometry height="40" width="40" x="780" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-sistema" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;dashed=1;" value="⚙️ Sistema Externo" vertex="1">
+          <mxGeometry height="40" width="180" x="860" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx1-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;strokeWidth=3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="280" width="1000" x="80" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx1-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1e40af;" value="👤 CONTEXTO 1: GERENCIAMENTO DE CLIENTES (Customer API)" vertex="1">
+          <mxGeometry height="40" width="800" x="100" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="ator-cliente1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#8b5cf6;strokeColor=#6d28d9;strokeWidth=2;fontSize=14;fontStyle=1;" value="Cliente" vertex="1">
+          <mxGeometry height="80" width="50" x="120" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-register" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 RegisterCustomer" vertex="1">
+          <mxGeometry height="60" width="170" x="220" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-registered" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 CustomerRegistered" vertex="1">
+          <mxGeometry height="60" width="180" x="430" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-customer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#16a34a;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟩 Customer&#xa;Aggregate" vertex="1">
+          <mxGeometry height="60" width="140" x="650" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-cpf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;align=center;" value="🟨 Validate CPF&#xa;(Unique)" vertex="1">
+          <mxGeometry height="60" width="140" x="830" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-identify" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 IdentifyByCPF" vertex="1">
+          <mxGeometry height="60" width="170" x="220" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-identified" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 CustomerIdentified" vertex="1">
+          <mxGeometry height="60" width="180" x="430" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mysql1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ MySQL&#xa;Database" vertex="1">
+          <mxGeometry height="60" width="130" x="650" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c1" edge="1" parent="1" source="ator-cliente1" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-register" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c2" edge="1" parent="1" source="cmd-register" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-registered" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c3" edge="1" parent="1" source="evt-registered" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#22c55e;" target="agg-customer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c4" edge="1" parent="1" source="agg-customer" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-cpf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c5" edge="1" parent="1" source="ator-cliente1" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-identify" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c6" edge="1" parent="1" source="cmd-identify" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-identified" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-c7" edge="1" parent="1" source="evt-identified" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mysql1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx2-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#22c55e;strokeWidth=3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="280" width="1000" x="80" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx2-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#16a34a;" value="🍔 CONTEXTO 2: CATÁLOGO DE PRODUTOS (Products API)" vertex="1">
+          <mxGeometry height="40" width="800" x="100" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="ator-admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#8b5cf6;strokeColor=#6d28d9;strokeWidth=2;fontSize=14;fontStyle=1;" value="Admin" vertex="1">
+          <mxGeometry height="80" width="50" x="120" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-create-product" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 CreateProduct" vertex="1">
+          <mxGeometry height="60" width="160" x="220" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-product-created" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 ProductCreated" vertex="1">
+          <mxGeometry height="60" width="160" x="420" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-product" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#16a34a;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟩 Product&#xa;Aggregate" vertex="1">
+          <mxGeometry height="60" width="140" x="620" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-category" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;align=center;" value="🟨 Validate Category&#xa;(SANDWICH/DRINK&#xa;/SIDE/DESSERT)" vertex="1">
+          <mxGeometry height="70" width="170" x="800" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-list-products" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 ListProducts" vertex="1">
+          <mxGeometry height="60" width="160" x="220" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-products-listed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 ProductsListed" vertex="1">
+          <mxGeometry height="60" width="160" x="420" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mysql2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ MySQL&#xa;Database" vertex="1">
+          <mxGeometry height="60" width="130" x="620" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p1" edge="1" parent="1" source="ator-admin" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-create-product" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p2" edge="1" parent="1" source="cmd-create-product" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-product-created" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p3" edge="1" parent="1" source="evt-product-created" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#22c55e;" target="agg-product" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p4" edge="1" parent="1" source="agg-product" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-category" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p5" edge="1" parent="1" source="ator-admin" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-list-products" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p6" edge="1" parent="1" source="cmd-list-products" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-products-listed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-p7" edge="1" parent="1" source="evt-products-listed" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mysql2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx3-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;strokeWidth=3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="620" width="1860" x="1200" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx3-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#d97706;" value="🛒 CONTEXTO 3: PEDIDO E PAGAMENTO (Orders API + Payment API)" vertex="1">
+          <mxGeometry height="40" width="900" x="1250" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ator-cliente3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#8b5cf6;strokeColor=#6d28d9;strokeWidth=2;fontSize=14;fontStyle=1;" value="Cliente" vertex="1">
+          <mxGeometry height="80" width="50" x="1240" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-create-order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 CreateOrder" vertex="1">
+          <mxGeometry height="60" width="150" x="1340" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-order-received" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 OrderReceived" vertex="1">
+          <mxGeometry height="60" width="160" x="1540" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-validate-items" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;align=center;" value="🟨 Validate Items&#xa;(Products API)" vertex="1">
+          <mxGeometry height="60" width="150" x="1750" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#16a34a;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟩 Order&#xa;Aggregate" vertex="1">
+          <mxGeometry height="60" width="130" x="1950" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-payment-requested" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=13;align=center;" value="🟧 PaymentRequested" vertex="1">
+          <mxGeometry height="60" width="170" x="2130" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-payment-api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ Payment API&#xa;(HTTP Call)" vertex="1">
+          <mxGeometry height="60" width="140" x="2350" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-qrcode-generated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=13;align=center;" value="🟧 QrCodeGenerated" vertex="1">
+          <mxGeometry height="60" width="170" x="2540" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mercadopago" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ Mercado Pago&#xa;QR Code" vertex="1">
+          <mxGeometry height="60" width="140" x="2760" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-payment-confirmed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=13;align=center;" value="🟧 PaymentConfirmed&#xa;(Webhook)" vertex="1">
+          <mxGeometry height="60" width="170" x="2540" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-update-order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;align=center;" value="🟨 Update Order&#xa;Status → PAID" vertex="1">
+          <mxGeometry height="60" width="150" x="2350" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-order-paid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 OrderPaid" vertex="1">
+          <mxGeometry height="60" width="140" x="2160" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-in-preparation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=13;align=center;" value="🟧 OrderStatusChanged&#xa;IN_PREPARATION" vertex="1">
+          <mxGeometry height="60" width="190" x="1950" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mongodb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ MongoDB&#xa;(Orders)" vertex="1">
+          <mxGeometry height="60" width="130" x="1750" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mysql3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ MySQL&#xa;(Payments)" vertex="1">
+          <mxGeometry height="60" width="130" x="1590" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="error-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;strokeWidth=2;dashed=1;" value="" vertex="1">
+          <mxGeometry height="160" width="800" x="1250" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="error-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#dc2626;" value="❌ CENÁRIO DE ERRO - Pagamento Recusado" vertex="1">
+          <mxGeometry height="30" width="400" x="1270" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-payment-failed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟧 PaymentFailed" vertex="1">
+          <mxGeometry height="60" width="150" x="1270" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-cancel-order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;align=center;" value="🟨 Cancel Order&#xa;Policy" vertex="1">
+          <mxGeometry height="60" width="140" x="1460" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-order-cancelled" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟧 OrderCancelled" vertex="1">
+          <mxGeometry height="60" width="160" x="1640" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o1" edge="1" parent="1" source="ator-cliente3" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-create-order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o2" edge="1" parent="1" source="cmd-create-order" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-order-received" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o3" edge="1" parent="1" source="evt-order-received" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-validate-items" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o4" edge="1" parent="1" source="pol-validate-items" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#22c55e;" target="agg-order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o5" edge="1" parent="1" source="agg-order" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-payment-requested" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o6" edge="1" parent="1" source="evt-payment-requested" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-payment-api" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o7" edge="1" parent="1" source="sys-payment-api" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-qrcode-generated" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o8" edge="1" parent="1" source="evt-qrcode-generated" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mercadopago" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o9" edge="1" parent="1" source="sys-mercadopago" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-payment-confirmed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o10" edge="1" parent="1" source="evt-payment-confirmed" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-update-order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o11" edge="1" parent="1" source="pol-update-order" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-order-paid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o12" edge="1" parent="1" source="evt-order-paid" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-in-preparation" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o13" edge="1" parent="1" source="evt-in-preparation" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mongodb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o14" edge="1" parent="1" source="pol-update-order" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mysql3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o15" edge="1" parent="1" source="evt-payment-failed" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-cancel-order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-o16" edge="1" parent="1" source="pol-cancel-order" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-order-cancelled" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx4-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0369a1;strokeWidth=3;dashed=1;" value="" vertex="1">
+          <mxGeometry height="280" width="1000" x="80" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx4-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0369a1;" value="👨‍🍳 CONTEXTO 4: ACOMPANHAMENTO DE PRODUÇÃO (Orders API)" vertex="1">
+          <mxGeometry height="40" width="800" x="100" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="ator-cozinha" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#8b5cf6;strokeColor=#6d28d9;strokeWidth=2;fontSize=14;fontStyle=1;" value="Cozinha" vertex="1">
+          <mxGeometry height="80" width="50" x="120" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-update-status" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 UpdateOrderStatus" vertex="1">
+          <mxGeometry height="60" width="180" x="220" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-status-changed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=13;align=center;" value="🟧 OrderStatusChanged" vertex="1">
+          <mxGeometry height="60" width="170" x="450" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="pol-status-flow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbbf24;strokeColor=#d97706;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=11;align=center;" value="🟨 Status Flow&#xa;RECEIVED→PREP&#xa;→READY→DONE" vertex="1">
+          <mxGeometry height="70" width="160" x="670" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-order2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#22c55e;strokeColor=#16a34a;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;align=center;" value="🟩 Order&#xa;Aggregate" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="cmd-list-active" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🔵 ListActiveOrders" vertex="1">
+          <mxGeometry height="60" width="180" x="220" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="evt-orders-listed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fb923c;strokeColor=#ea580c;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=14;" value="🟧 ActiveOrdersListed" vertex="1">
+          <mxGeometry height="60" width="180" x="450" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="sys-mongodb2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=12;dashed=1;align=center;" value="⚙️ MongoDB&#xa;(Orders)" vertex="1">
+          <mxGeometry height="60" width="130" x="680" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k1" edge="1" parent="1" source="ator-cozinha" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-update-status" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k2" edge="1" parent="1" source="cmd-update-status" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-status-changed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k3" edge="1" parent="1" source="evt-status-changed" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fbbf24;dashed=1;" target="pol-status-flow" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k4" edge="1" parent="1" source="pol-status-flow" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#22c55e;" target="agg-order2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k5" edge="1" parent="1" source="ator-cozinha" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#3b82f6;" target="cmd-list-active" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k6" edge="1" parent="1" source="cmd-list-active" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#fb923c;" target="evt-orders-listed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-k7" edge="1" parent="1" source="evt-orders-listed" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#94a3b8;dashed=1;" target="sys-mongodb2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="contexts-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="220" width="440" x="640" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="contexts-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1e40af;" value="🎯 BOUNDED CONTEXTS" vertex="1">
+          <mxGeometry height="30" width="300" x="660" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="bc1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#374151;" value="👤 Customer Context" vertex="1">
+          <mxGeometry height="30" width="280" x="680" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="bc1-detail" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#6b7280;fontStyle=2;" value="Customer, CPF, Identification" vertex="1">
+          <mxGeometry height="20" width="260" x="700" y="1415" as="geometry" />
+        </mxCell>
+        <mxCell id="bc2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#374151;" value="🍔 Product Context" vertex="1">
+          <mxGeometry height="30" width="280" x="680" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="bc2-detail" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#6b7280;fontStyle=2;" value="Product, Category, Catalog" vertex="1">
+          <mxGeometry height="20" width="260" x="700" y="1465" as="geometry" />
+        </mxCell>
+        <mxCell id="bc3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#374151;" value="🛒 Order &amp;amp; Payment Context" vertex="1">
+          <mxGeometry height="30" width="280" x="680" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="bc3-detail" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#6b7280;fontStyle=2;" value="Order, Payment, QrCode, Webhook" vertex="1">
+          <mxGeometry height="20" width="260" x="700" y="1515" as="geometry" />
+        </mxCell>
+        <mxCell id="metricas-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="220" width="500" x="80" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="metricas-titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#d97706;" value="📊 MÉTRICAS DE NEGÓCIO" vertex="1">
+          <mxGeometry height="30" width="300" x="100" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="metric1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#374151;" value="📈 total_orders_created" vertex="1">
+          <mxGeometry height="30" width="250" x="120" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="metric2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#374151;" value="📈 total_payments_confirmed" vertex="1">
+          <mxGeometry height="30" width="250" x="120" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="metric3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#374151;" value="📈 avg_order_preparation_time" vertex="1">
+          <mxGeometry height="30" width="270" x="120" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="metric4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#374151;" value="📈 total_orders_cancelled" vertex="1">
+          <mxGeometry height="30" width="250" x="120" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="metric5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#374151;" value="📈 total_active_orders" vertex="1">
+          <mxGeometry height="30" width="200" x="120" y="1510" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

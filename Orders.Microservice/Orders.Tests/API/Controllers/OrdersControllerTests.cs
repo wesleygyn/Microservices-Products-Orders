@@ -621,6 +621,7 @@ namespace Orders.Tests.API.Controllers
                 Observation: "Pedido teste",
                 Number: number,
                 PaymentId: null,
+                QrCode: null,
                 PaymentStatus: PaymentStatusEnum.PENDING,
                 Total: 50.00m,
                 CreatedAt: DateTime.UtcNow,

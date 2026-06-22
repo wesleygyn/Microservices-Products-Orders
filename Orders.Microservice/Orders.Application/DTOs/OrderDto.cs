@@ -1,9 +1,6 @@
 ﻿using Orders.Domain.Enums;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orders.Application.DTOs
 {
@@ -14,6 +11,7 @@ namespace Orders.Application.DTOs
         string? Observation,
         int Number,
         string? PaymentId,
+        string? QrCode,
         PaymentStatusEnum PaymentStatus,
         decimal Total,
         DateTime CreatedAt,

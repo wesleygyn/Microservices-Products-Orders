@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="MongoDB.Driver" Version="2.28.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Payment.Domain\Payment.Domain.csproj" />
+		<ProjectReference Include="..\Payment.Application\Payment.Application.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Data\" />
+	</ItemGroup>
+
+</Project>

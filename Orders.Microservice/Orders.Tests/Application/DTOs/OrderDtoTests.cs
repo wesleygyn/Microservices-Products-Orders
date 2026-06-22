@@ -15,6 +15,7 @@ namespace Orders.Tests.Application.DTOs
             var observation = "Pedido teste";
             var number = 100;
             var paymentId = "pay_123";
+            var qrCode = "qr_123";
             var paymentStatus = PaymentStatusEnum.PENDING;
             var total = 150.50m;
             var createdAt = DateTime.UtcNow;
@@ -25,7 +26,7 @@ namespace Orders.Tests.Application.DTOs
             };
             var dto = new OrderDto(
                 id, customerId, status, observation, number,
-                paymentId, paymentStatus, total, createdAt, updatedAt, items
+                paymentId, qrCode, paymentStatus, total, createdAt, updatedAt, items
             );
             dto.Should().NotBeNull();
             dto.Id.Should().Be(id);
@@ -34,6 +35,7 @@ namespace Orders.Tests.Application.DTOs
             dto.Observation.Should().Be(observation);
             dto.Number.Should().Be(number);
             dto.PaymentId.Should().Be(paymentId);
+            dto.QrCode.Should().Be(qrCode);
             dto.PaymentStatus.Should().Be(paymentStatus);
             dto.Total.Should().Be(total);
             dto.CreatedAt.Should().Be(createdAt);
@@ -50,7 +52,7 @@ namespace Orders.Tests.Application.DTOs
             var items = new List<OrderItemDto>();
             var dto = new OrderDto(
                 id, null, OrderStatusEnum.RECEIVED, null, 100,
-                null, PaymentStatusEnum.PENDING, 0m, createdAt, updatedAt, items
+                null, null, PaymentStatusEnum.PENDING, 0m, createdAt, updatedAt, items
             );
             dto.CustomerId.Should().BeNull();
             dto.Observation.Should().BeNull();
@@ -66,7 +68,7 @@ namespace Orders.Tests.Application.DTOs
             var items = new List<OrderItemDto>();
             var dto = new OrderDto(
                 id, Guid.NewGuid(), OrderStatusEnum.FINALIZED, "Obs", 100,
-                "pay_123", PaymentStatusEnum.PAID, 100m, createdAt, updatedAt, items
+                "pay_123", "pay_123", PaymentStatusEnum.PAID, 100m, createdAt, updatedAt, items
             );
             dto.Status.Should().Be(OrderStatusEnum.FINALIZED);
             dto.PaymentStatus.Should().Be(PaymentStatusEnum.PAID);
@@ -83,11 +85,11 @@ namespace Orders.Tests.Application.DTOs
 
             var dto1 = new OrderDto(
                 id, customerId, OrderStatusEnum.RECEIVED, "Obs", 100,
-                "pay_123", PaymentStatusEnum.PENDING, 100m, createdAt, updatedAt, items
+                "pay_123", "pay_123", PaymentStatusEnum.PENDING, 100m, createdAt, updatedAt, items
             );
             var dto2 = new OrderDto(
                 id, customerId, OrderStatusEnum.RECEIVED, "Obs", 100,
-                "pay_123", PaymentStatusEnum.PENDING, 100m, createdAt, updatedAt, items
+                "pay_123", "pay_123", PaymentStatusEnum.PENDING, 100m, createdAt, updatedAt, items
             );
 
             dto1.Should().Be(dto2);

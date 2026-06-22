@@ -51,6 +51,10 @@ namespace Orders.Infrastructure.Data
                     .HasColumnName("payment_id")
                     .HasMaxLength(100);
 
+                entity.Property(e => e.QrCode)
+                    .HasColumnName("qr_code")
+                    .HasMaxLength(500);
+
                 entity.Property(e => e.PaymentStatus)
                     .HasColumnName("payment_status")
                     .HasConversion<string>()

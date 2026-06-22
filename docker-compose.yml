@@ -19,6 +19,26 @@ services:
       timeout: 5s
       retries: 5
 
+  # MongoDB para Payment
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - microservices_network
+      - fiap-net
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   # API de Produtos
   products_api:
     build:
@@ -50,7 +70,7 @@ services:
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=orders_db;user=root;password=123456;Persist Security Info=False;Connect Timeout=300
       - ProductsApi__BaseUrl=http://products_api:80
-      - PaymentApi__BaseUrl=http://host.docker.internal:8083
+      - PaymentApi__BaseUrl=http://payment_api:80
     ports:
       - "5002:80"
     depends_on:
@@ -58,6 +78,49 @@ services:
         condition: service_healthy
       products_api:
         condition: service_started
+    networks:
+      - microservices_network
+      - fiap-net
+    restart: on-failure
+
+  # API de Clientes
+  customers_api:
+    build:
+      context: ./Customer.Microservice
+      dockerfile: Customer.API/Dockerfile
+    container_name: customers_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=customers_db;user=root;password=123456;Persist Security Info=False;Connect Timeout=300
+    ports:
+      - "5003:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - microservices_network
+      - fiap-net
+    restart: on-failure
+
+  # API de Pagamentos
+  payment_api:
+    build:
+      context: ./Payment.Microservice
+      dockerfile: Payment.API/Dockerfile
+    container_name: payment_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - MongoDbSettings__ConnectionString=mongodb://root:123456@mongodb:27017
+      - MongoDbSettings__DatabaseName=payments_db
+      - MongoDbSettings__CollectionName=payments
+      - OrdersApi__BaseUrl=http://orders_api:80
+    ports:
+      - "5004:80"
+    depends_on:
+      mongodb:
+        condition: service_healthy
     networks:
       - microservices_network
       - fiap-net
@@ -71,3 +134,4 @@ networks:
 
 volumes:
   mysql_data:
+  mongodb_data:

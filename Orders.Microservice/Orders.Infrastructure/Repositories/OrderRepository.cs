@@ -76,10 +76,27 @@ namespace Orders.Infrastructure.Repositories
         public async Task<Order> UpdateAsync(Order order)
         {
             order.UpdatedAt = DateTime.UtcNow;
-            _context.Orders.Update(order);
-            await _context.SaveChangesAsync();
 
-            // Recarregar com itens
+            await _context.Orders
+                .Where(o => o.Id == order.Id)
+                .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(o => o.Status, order.Status)
+                    .SetProperty(o => o.PaymentStatus, order.PaymentStatus)
+                    .SetProperty(o => o.PaymentId, order.PaymentId)
+                    .SetProperty(o => o.Observation, order.Observation)
+                    .SetProperty(o => o.TotalAmount, order.TotalAmount)
+                    .SetProperty(o => o.UpdatedAt, order.UpdatedAt)
+                );
+
+            if (order.QrCode != null)
+            {
+                await _context.Orders
+                    .Where(o => o.Id == order.Id)
+                    .ExecuteUpdateAsync(setters => setters
+                        .SetProperty(o => o.QrCode, order.QrCode)
+                    );
+            }
+
             return (await GetByIdWithItemsAsync(order.Id))!;
         }
 

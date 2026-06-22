@@ -1,0 +1,127 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Página-1" id="wUU6mSob5qRC1qmiq_Z0">
+    <mxGraphModel dx="3756" dy="1591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;fontSize=28;fontStyle=1;fillColor=none;strokeColor=none;" value="🛒 C4 - NÍVEL 3: COMPONENTES - ORDERS API" vertex="1">
+          <mxGeometry height="50" width="660" x="515" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#64748b;" value="Detalhe interno do microsserviço de Pedidos" vertex="1">
+          <mxGeometry height="30" width="650" x="520" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="orders-api-container" parent="1" style="rounded=1;dashed=1;dashPattern=8 8;strokeWidth=3;strokeColor=#3b82f6;fillColor=#dbeafe;fontSize=16;fontStyle=1;align=center;verticalAlign=top;labelBackgroundColor=#6666FF;" value="Orders API Container" vertex="1">
+          <mxGeometry height="740" width="1210" x="240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="orders-controller" parent="1" style="rounded=1;fillColor=#3b82f6;strokeColor=#1d4ed8;strokeWidth=2;fontColor=#fff;fontSize=13;" value="OrdersController&#xa;&#xa;Endpoints para criar, consultar&#xa;e atualizar pedidos" vertex="1">
+          <mxGeometry height="100" width="220" x="310" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="order-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="OrderService&#xa;&#xa;Lógica de negócio para&#xa;gerenciamento de pedidos" vertex="1">
+          <mxGeometry height="100" width="220" x="630" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="order-status-service" parent="1" style="rounded=1;fillColor=#10b981;strokeColor=#059669;strokeWidth=2;fontColor=#fff;fontSize=12;" value="OrderStatusService&#xa;&#xa;Gerencia o fluxo de status&#xa;do pedido (cozinha)" vertex="1">
+          <mxGeometry height="100" width="220" x="630" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="order-repository" parent="1" style="rounded=1;fillColor=#6366f1;strokeColor=#4f46e5;strokeWidth=2;fontColor=#fff;fontSize=12;" value="OrderRepository&#xa;&#xa;Acesso e persistência de&#xa;dados de pedidos no MongoDB" vertex="1">
+          <mxGeometry height="100" width="220" x="630" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="products-api-client" parent="1" style="rounded=1;fillColor=#ec4899;strokeColor=#db2777;strokeWidth=2;fontColor=#fff;fontSize=11;align=center;" value="ProductsApiClient&#xa;&#xa;Comunicação com Products API&#xa;para validar e buscar produtos" vertex="1">
+          <mxGeometry height="100" width="200" x="950" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-api-client" parent="1" style="rounded=1;fillColor=#ec4899;strokeColor=#db2777;strokeWidth=2;fontColor=#fff;fontSize=11;align=center;" value="PaymentApiClient&#xa;&#xa;Comunicação com Payment API&#xa;para solicitar e confirmar pagamentos" vertex="1">
+          <mxGeometry height="100" width="200" x="950" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="totem-monitor-client" parent="1" style="rounded=1;fillColor=#ec4899;strokeColor=#db2777;strokeWidth=2;fontColor=#fff;fontSize=11;align=center;" value="TotemMonitorClient&#xa;&#xa;Atualiza status do pedido&#xa;no monitor da cozinha" vertex="1">
+          <mxGeometry height="100" width="200" x="950" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="mongodb-orders" parent="1" style="shape=cylinder3;fillColor=#16a34a;strokeColor=#15803d;strokeWidth=2;fontColor=#fff;fontSize=12;size=10;" value="MongoDB&#xa;(Orders DB)" vertex="1">
+          <mxGeometry height="80" width="120" x="1270" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="products-api-ext" parent="1" style="rounded=1;dashed=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#fff;fontSize=12;" value="Products API" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-api-ext" parent="1" style="rounded=1;dashed=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#fff;fontSize=12;" value="Payment API" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="totem-monitor-ext" parent="1" style="rounded=1;dashed=1;fillColor=#94a3b8;strokeColor=#64748b;strokeWidth=2;fontColor=#fff;fontSize=12;" value="Totem / Monitor" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-ext-controller" edge="1" parent="1" source="orders-api-container" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3b82f6;" target="orders-controller" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="230" />
+            </Array>
+            <mxPoint x="240" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-controller-service" edge="1" parent="1" source="orders-controller" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#10b981;" target="order-service" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="230" as="sourcePoint" />
+            <mxPoint x="630" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-service-repository" edge="1" parent="1" source="order-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6366f1;exitX=0.003;exitY=0.787;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="order-repository" value="Usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="259" />
+              <mxPoint x="580" y="530" />
+            </Array>
+            <mxPoint x="740" y="280" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-repository-mongodb" edge="1" parent="1" source="order-repository" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#16a34a;exitX=0.75;exitY=1;exitDx=0;exitDy=0;jumpStyle=arc;" target="mongodb-orders" value="TCP/NoSQL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="795" y="620" />
+              <mxPoint x="1330" y="620" />
+            </Array>
+            <mxPoint x="850" y="530" as="sourcePoint" />
+            <mxPoint x="1270" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-service-products-client" edge="1" parent="1" source="order-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ec4899;" target="products-api-client" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="230" as="sourcePoint" />
+            <mxPoint x="950" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-products-client-ext" edge="1" parent="1" source="products-api-client" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#94a3b8;dashed=1;" target="products-api-ext" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="230" as="sourcePoint" />
+            <mxPoint x="1260" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-service-payment-client" edge="1" parent="1" source="order-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ec4899;entryX=0.019;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" target="payment-api-client" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="330" as="sourcePoint" />
+            <mxPoint x="950" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-payment-client-ext" edge="1" parent="1" source="payment-api-client" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#94a3b8;dashed=1;" target="payment-api-ext" value="HTTPS/REST">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="360" as="sourcePoint" />
+            <mxPoint x="1260" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-status-service-totem-client" edge="1" parent="1" source="order-status-service" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#ec4899;entryX=0.02;entryY=0.042;entryDx=0;entryDy=0;entryPerimeter=0;" target="totem-monitor-client" value="Invoca">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="380" as="sourcePoint" />
+            <mxPoint x="950" y="482" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-totem-client-ext" edge="1" parent="1" source="totem-monitor-client" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#94a3b8;dashed=1;exitX=0.749;exitY=1.04;exitDx=0;exitDy=0;exitPerimeter=0;jumpStyle=arc;" target="totem-monitor-ext" value="HTTPS/REST">
+          <mxGeometry relative="1" x="0.375" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1100" y="680" />
+            </Array>
+            <mxPoint x="1150" y="510" as="sourcePoint" />
+            <mxPoint x="1260" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

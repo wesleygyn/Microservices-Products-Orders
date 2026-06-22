@@ -3,7 +3,7 @@
 namespace Orders.Infrastructure.HttpClients
 {
     public record PaymentResponse(
-        string PaymentId,
+        string Id,
         string OrderId,
         decimal TotalAmount,
         string Status,

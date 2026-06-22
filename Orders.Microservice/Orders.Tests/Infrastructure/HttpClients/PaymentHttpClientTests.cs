@@ -60,7 +60,7 @@ namespace Orders.Tests.Infrastructure.HttpClients
 
             // Assert
             result.Should().NotBeNull();
-            result!.PaymentId.Should().Be(payment.PaymentId);
+            result!.Id.Should().Be(payment.Id);
             result.OrderId.Should().Be(payment.OrderId);
             result.TotalAmount.Should().Be(payment.TotalAmount);
 
